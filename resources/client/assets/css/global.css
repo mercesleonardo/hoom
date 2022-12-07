@@ -1,0 +1,299 @@
+/*
+Reseta nossa pagina dos estilos padroes do navegador
+reset */
+
+
+body {
+    font-size: 16px;
+}
+
+input[type="text"] {
+    font-size: inherit;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    select,
+    textarea,
+    input {
+        font-size: 16px;
+    }
+}
+
+root {
+    display: block;
+}
+
+* {
+    padding: 0;
+    border: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+input,
+textarea,
+select {
+    outline: none;
+}
+
+
+
+
+/* grides */
+
+#pagina {
+    width: 100%;
+    display: block;
+    overflow: hidden;
+}
+
+#miolo {
+    width: 100%;
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+
+.wrap {
+    /* padrao de largura dos site, matem o conteudo centralizado e com tamanho de 940px largura */
+    display: flex;
+    margin: 0 auto;
+    position: relative;
+    padding: 76px 0;
+    width: 82%;
+    flex-direction: column;
+}
+
+#topo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.
+/* alinhamento
+  Mantem a quantidade de box independente do tamnaho do pai, quantidade de acordo com a numeracao depois do x limtado a 6 box
+  */
+
+.col-full {
+    width: 100%;
+}
+
+.col-x2 {
+    width: 50%;
+}
+
+.col-x3 {
+    width: 33%;
+}
+
+.col-x4 {
+    width: 25%;
+}
+
+.col-x5 {
+    width: 20%;
+}
+
+.col-x6 {
+    width: 16.65%;
+}
+
+[class*='col-'] {
+    display: inline-flex;
+}
+
+[class*='box-'] {
+    position: relative;
+}
+
+.col-1 {
+    width: 8.33%;
+}
+
+.col-2 {
+    width: 16.67%;
+}
+
+.col-3 {
+    width: 25%;
+}
+
+.col-4 {
+    width: 33.33%;
+}
+
+.col-5 {
+    width: 41.66%;
+}
+
+.col-6 {
+    width: 50%;
+}
+
+.col-7 {
+    width: 58.3%;
+}
+
+.col-8 {
+    width: 66.7%;
+}
+
+.col-9 {
+    width: 75%;
+}
+
+.col-10 {
+    width: 83.28%;
+}
+
+.col-11 {
+    width: 91.7%;
+}
+
+.col-12 {
+    width: 100%;
+}
+
+.col-inline {
+    /* funciona como um float, mas esse e bom para deixar responsivo OBS: evite usar muito float, a menos que seja nescessÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¡rio */
+    display: inline-flex;
+    position: relative;
+    flex-direction: column;
+}
+
+.content {
+    /* centraliza os itens verticalmente*/
+    align-items: center;
+    display: flex;
+    height: 100%;
+    position: relative;
+    width: 100%;
+}
+
+.btn {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+}
+
+.esq {
+    float: left;
+}
+
+.dir {
+    float: right;
+}
+
+
+/* fim alinhamento */
+
+
+/* estilizacao das fontes */
+
+p {
+    font-size: 14px;
+    line-height: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+
+b,
+strong {
+    /* padrao para toda tag strong do site */
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 600;
+    letter-spacing: -0.28px;
+}
+
+@font-face {
+    font-family: "fontello";
+    src: url("../fontello/fontello.eot?7977416");
+    src: url("../fontello/fontello.eot?7977416#iefix") format("embedded-opentype"), url("../fontello/fontello.woff?7977416") format("woff"), url("../fontello/fontello.ttf?7977416") format("truetype"), url("../fontello/fontello.svg?7977416#fontello") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+.icon-text {
+    font-family: 'fontello';
+}
+
+
+/* guarda a fonte com os icones de fonte */
+
+
+/* fim estilizacao das fontes */
+
+
+/* estilos padrao */
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: relative;
+    font-size: 16px;
+}
+
+.link-full {
+    /* aplicada na tag a para que o link ocupe todo o box */
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 20;
+}
+
+.trans-fast {
+    /* aplica a transicao no objeto, usado muito nos elementos que tem hover */
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+.trans-slow {
+    /* aplica a transicao no objeto, usado muito nos elementos que tem hover */
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -ms-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+
+.radius-full {
+    /* deixa o objeto redondo, lembrando que o objeto ja tem que esta com tamnho definido */
+    -webkit-border-radius: 100%;
+    border-radius: 100%;
+}
+
+.radius-med {
+    /* deixa o objeto com bordas arredondada, usado muito nos botoes e inputs*/
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+}
+
+.radius-min {
+    /* deixa o objeto com bordas um pouco arredondada, usado muito nas imagens e box*/
+    -webkit-border-radius: 20px;
+    border-radius: 20px;
+}
+img{
+    object-fit: cover;    
+}
+
