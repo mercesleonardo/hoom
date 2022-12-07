@@ -6,7 +6,7 @@
     background-size: cover;
     background-color: #08001C;
 }
-.topo-lateral{
+.topo-lateral-login{
     position: absolute;
     left: 0;
     width: 137px;
@@ -17,16 +17,16 @@
     justify-content: center;
     align-items: center;
 }
-.logo-hoom{
+.logo-hoom-login{
     position: absolute;
     top: 36px;
     left: 55px;
     width: 133px;
 }
-.logo-hoom img{
+.logo-hoom-login img{
     width:100%;
 }
-.rede-lateral{
+.rede-lateral-login{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -34,7 +34,7 @@
     gap: 17px 0;
     margin-top: 99px;
 }
-.rede-lateral:before{
+.rede-lateral-login:before{
     content:
     '';
     width: 1px;
@@ -42,14 +42,14 @@
     background: #5CFFC4;
     margin-bottom: 17px;
 }
-.rede-lateral:after{
+.rede-lateral-login:after{
     content: '';
     width: 1px;
     height: 134px;
     background: #5CFFC4;
     margin-top: 17px;
 }
-.conteudo{
+.conteudo-login{
     width: 33%;
     margin-right: auto;
     height: 100vh;
@@ -61,11 +61,11 @@
     padding-top: 68px;
 }
 
-.engloba-titulo{
+.engloba-titulo-login{
     width: 100%;
     margin-bottom: 44px;
 }
-.engloba-titulo:after{
+.engloba-titulo-login:after{
     content:
     '';
     width:100%;
@@ -75,7 +75,7 @@
     border-radius: 2.5px;
     margin-top: 28px;
 }
-.engloba-titulo .titulo{
+.engloba-titulo-login .titulo-login{
     color: #FFFFFF;
     font-size: 31px;
     margin-right: 37px;
@@ -84,7 +84,7 @@
     line-height: 33px;
     margin-bottom: 9px;
 }
-.engloba-titulo p{
+.engloba-titulo-login p{
     color: #AAB2B7;
     font-size: 14px;
     width: 251px;
@@ -93,23 +93,23 @@
     margin: 0;
     line-height: 21px;
 }
-.acessar{
+.acessar-login{
     width: 100%;
 }
-.acessar form{
+.acessar-login form{
     display: flex;
     flex-direction: column;
     width: 100%;
     gap: 17px 0;
 }
-.acessar .titulo{
+.acessar-login .titulo-login{
     color:#fff;
     font-size: 20px;
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
     margin-bottom: 18px;
 }
-.acessar input{
+.acessar-login input{
     width: 100%;
     height: 51px;
     border: 1px solid #575757;
@@ -120,7 +120,7 @@
     font-weight: 400;
     color: #778087;
 }
-.btn-acessar{
+.btn-acessar-login{
     width: 100%;
     height: 48.36px;
     background: linear-gradient(to right, #AF37DE , #683EE4);
@@ -135,13 +135,13 @@
     margin-top: 29px;
     cursor: pointer;
 }
-.btn-criar{
+.btn-criar-login{
 
 margin: 0 auto;
 
 margin-top: 32px;
 }
-.btn-criar a{
+.btn-criar-login a{
 
 color: #fff;
 
@@ -159,7 +159,7 @@ font-weight: 600;
 
 font-size: 17px;
 }
-.btn-criar a span{
+.btn-criar-login a span{
 
 margin-bottom: 5px;
 }

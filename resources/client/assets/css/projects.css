@@ -1,4 +1,4 @@
-.sec-projeto {
+.sec-projetos {
     width: 100vw;
     height: 100vh;
     background-position: center;
@@ -7,7 +7,7 @@
     background-color: #08001C;
 }
 
-.topo-lateral {
+.topo-lateral-projects {
     position: absolute;
     left: 0;
     width: 137px;
@@ -19,18 +19,18 @@
     align-items: center;
 }
 
-.logo-hoom {
+.logo-hoom-projects {
     position: absolute;
     bottom: 36px;
     left: 55px;
     width: 133px;
 }
 
-.logo-hoom img {
+.logo-hoom-projects img {
     width: 100%;
 }
 
-.rede-lateral {
+.rede-lateral-projects {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -39,7 +39,7 @@
     margin-top: 99px;
 }
 
-.rede-lateral:before {
+.rede-lateral-projects:before {
     content:
         '';
     width: 1px;
@@ -48,20 +48,20 @@
     margin-bottom: 17px;
 }
 
-.rede-lateral:after {
+.rede-lateral-projects:after {
     content: '';
     width: 1px;
     height: 134px;
     background: #5CFFC4;
     margin-top: 17px;
 }
-.conteudo-box-projeto {
+.conteudo-box-projetos {
     margin-top: 30px;
     display: flex;
     flex-wrap: wrap;
     gap: 26px 0;
 }
-.conteudo-projeto {
+.conteudo-projetos {
     width: 84%;
     margin-right: auto;
     height: 100vh;
@@ -74,7 +74,7 @@
     position: relative;
 }
 
-.engloba-titulo {
+.engloba-titulo-projects {
     width: 100%;
     margin-bottom: 44px;
     display: flex;
@@ -83,7 +83,7 @@
     align-items: center;
 }
 
-.ld1-titulo .titulo {
+.ld1-titulo-projects .titulo-projects {
     color: #FFFFFF;
     font-size: 31px;
     margin-right: 37px;
@@ -93,15 +93,15 @@
     display: flex;
     align-items: center;
 }
-.ld1-titulo .titulo .esq{
+.ld1-titulo-projects .titulo-projects .esq-projects{
     display: flex;
     margin-right: 23px;
 }
-.ld1-titulo .titulo .esq .img-esq{
+.ld1-titulo-projects .titulo-projects .esq-projects .img-esq-projects{
     width: 12px;
     height: 31px;
 }
-.engloba-titulo:after {
+.engloba-titulo-projects:after {
     content:
         '';
     width: 100%;
@@ -114,14 +114,14 @@
     bottom: -27px;
 }
 
-.ld1-projeto {
+.ld1-projetos {
     
 display: flex;
     
 align-items: center;
 }
 
-.ld1-projeto .titulo {
+.ld1-projetos .titulo-projects {
     color: #FFFFFF;
     font-size: 17px;
     font-family: 'Poppins', sans-serif;
@@ -130,50 +130,50 @@ align-items: center;
     line-height: 33px;
     align-items: center;
 }
-.separador{
+.separador-projects{
     background: #6F3BED;
     width: 1px;
     height: 35px;
     display: flex;
     margin: 0 61px;
 }
-.ld1-projeto .titulo img{
+.ld1-projetos .titulo-projects img{
     display: flex;
     width: 21.83px;
     margin-right: 26px;
 }
-.btn-projeto{
+.btn-projetos{
     
 }
-.btn-projeto a{
+.btn-projetos a{
     color: #707070;
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
     font-size: 17px;
 }
-.ld2-projeto{
+.ld2-projetos{
     
 display: flex;
     
 align-items: center;
 }
-.btn-status .titulo{
+.btn-status-projects .titulo-projects{
     color: #FFFFFF;
     font-size: 17px;
     margin-left: 29px;
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
 }
-.btn-status  img{
+.btn-status-projects  img{
     width: 25.6px;
     height: 25.6px;
     object-fit: contain;
 }
-.btn-status{
+.btn-status-projects{
     display: flex;
     align-items: center;
 }
-.ld1-titulo p {
+.ld1-titulo-projects p {
     color: #AAB2B7;
     font-size: 14px;
     width: 251px;
@@ -183,7 +183,7 @@ align-items: center;
     line-height: 21px;
 }
 
-.box-projeto{
+.box-projetos{
     width: 100%;
     display: flex;
     align-items: center;
@@ -194,7 +194,7 @@ align-items: center;
     border: 1px solid rgb(111 59 237 / 43%);
 }
 
-.mais {
+.mais-projects {
     position: absolute;
     right: 22px;
     bottom: 58px;

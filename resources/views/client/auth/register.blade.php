@@ -1,14 +1,14 @@
 @extends('client.core.head')
 
 @section('content')
-    <section class="sec-signin" style="background-image:url(images/bg-padrao.png);">
-        <div class="topo-lateral">
-            <div class="logo-hoom">
+    <section class="sec-signup" style="background-image:url(images/bg-padrao.png);">
+        <div class="topo-lateral-register">
+            <div class="logo-hoom-register">
                 <a href="{{ route('home') }}">
                     <img src="images/logo.png" alt="">
                 </a>
             </div>
-            <div class="rede-lateral">
+            <div class="rede-lateral-register">
                 <a href="">
                     <img src="images/icone-rede1.png" alt="">
                 </a>
@@ -20,11 +20,11 @@
                 </a>
             </div>
         </div>
-        <div class="conteudo">
-            <div class="engloba-titulo">
-                <h4 class="titulo">Área de Cadastro</h4>
+        <div class="conteudo-register">
+            <div class="engloba-titulo-register">
+                <h4 class="titulo-register">Área de Cadastro</h4>
             </div>
-            <div class="acessar">
+            <div class="acessar-register">
 
                 <form action="{{ route('register') }}" method="POST">
                     @csrf
@@ -48,10 +48,10 @@
                         <input type="password" name="password" id="password" placeholder="Confirme sua Senha" required>
                     </label>
 
-                    <button type="submit" class="btn-acessar">Cadastrar</button>
+                    <button type="submit" class="btn-acessar-register">Cadastrar</button>
                 </form>
 
-                <div class="btn-criar">
+                <div class="btn-criar-register">
                     <a href="{{route('login')}}"><span class="criar">Ou</span>Acessar minha conta</a>
                 </div>
             </div>

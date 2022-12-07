@@ -2,13 +2,13 @@
 
 @section('content')
     <section class="sec-blogs" style="background-image:url(images/pd-dashboard.png);">
-        <div class="topo-lateral">
-            <div class="logo-hoom">
+        <div class="topo-lateral-blogs">
+            <div class="logo-hoom-blogs">
                 <a href="">
                     <img src="images/logo.png" alt="">
                 </a>
             </div>
-            <div class="rede-lateral">
+            <div class="rede-lateral-blogs">
                 <a href="">
                     <img src="images/icone-rede1.png" alt="">
                 </a>
@@ -21,15 +21,15 @@
             </div>
         </div>
         <div class="conteudo-blogs">
-            <div class="engloba-titulo">
-                <div class="ld1-titulo">
-                    <h4 class="titulo-principal">
-                        <a class="esq" href="dashboard.html">
-                            <img class="img-esq" src="images/esq.png" alt="">
+            <div class="engloba-titulo-blogs">
+                <div class="ld1-titulo-blogs">
+                    <h4 class="titulo-principal-blogs">
+                        <a class="esq-blogs" href="dashboard.html">
+                            <img class="img-esq-blogs" src="images/esq.png" alt="">
                         </a>Blogs
                     </h4>
                 </div>
-                <div class="ld2-titulo">
+                <div class="ld2-titulo-blogs">
                     <a href="">
                         <img src="images/icone-home.png" alt="">
                     </a>
@@ -37,81 +37,81 @@
             </div>
 
             <div class="conteudo-box-blogs">
-                <div class="box-blog">
+                <div class="box-blogs">
                     <a href="blog.html">
-                        <div class="image">
+                        <div class="image-blogs">
                             <img src="images/blog.png" alt="">
                         </div>
-                        <div class="descricao">
-                            <h2 class="titulo">Marketing Digital</h2>
-                            <h4 class="subtitulo">Como pesquisar palavras-chave
+                        <div class="descricao-blogs">
+                            <h2 class="titulo-blogs">Marketing Digital</h2>
+                            <h4 class="subtitulo-blogs">Como pesquisar palavras-chave
                                 No google ADS</h4>
                             <p></p>
-                            <div class="pessoa">
-                                <div class="perfil">
-                                    <img class="img-pessoa" src="" alt="">
-                                    <div class="descricao-pessoa">
-                                        <h4 class="titulo-pessoa">Mateus Matos</h4>
-                                        <span class="minutos">2 minutes ago</span>
+                            <div class="pessoa-blogs">
+                                <div class="perfil-blogs">
+                                    <img class="img-pessoa-blogs" src="" alt="">
+                                    <div class="descricao-pessoa-blogs">
+                                        <h4 class="titulo-pessoa-blogs">Mateus Matos</h4>
+                                        <span class="minutos-blogs">2 minutes ago</span>
                                     </div>
                                 </div>
-                                <div class="curtidas">
-                                    <img class="coracao" src="images/heart.png" alt="">
-                                    <span class="numero-curtidas">325</span>
+                                <div class="curtidas-blogs">
+                                    <img class="coracao-blogs" src="images/heart.png" alt="">
+                                    <span class="numero-curtidas-blogs">325</span>
                                 </div>
                             </div>
                         </div>
 
                     </a>
                 </div>
-                <div class="box-blog">
+                <div class="box-blogs">
                     <a href="blog.html">
-                        <div class="image">
+                        <div class="image-blogs">
                             <img src="images/blog.png" alt="">
                         </div>
-                        <div class="descricao">
-                            <h2 class="titulo">Marketing Digital</h2>
-                            <h4 class="subtitulo">Como pesquisar palavras-chave
+                        <div class="descricao-blogs">
+                            <h2 class="titulo-blogs">Marketing Digital</h2>
+                            <h4 class="subtitulo-blogs">Como pesquisar palavras-chave
                                 No google ADS</h4>
                             <p></p>
-                            <div class="pessoa">
-                                <div class="perfil">
-                                    <img class="img-pessoa" src="" alt="">
-                                    <div class="descricao-pessoa">
-                                        <h4 class="titulo-pessoa">Mateus Matos</h4>
-                                        <span class="minutos">2 minutes ago</span>
+                            <div class="pessoa-blogs">
+                                <div class="perfil-blogs">
+                                    <img class="img-pessoa"-blogs src="" alt="">
+                                    <div class="descricao-pessoa-blogs">
+                                        <h4 class="titulo-pessoa-blogs">Mateus Matos</h4>
+                                        <span class="minutos-blogs">2 minutes ago</span>
                                     </div>
                                 </div>
-                                <div class="curtidas">
-                                    <img class="coracao" src="images/heart.png" alt="">
-                                    <span class="numero-curtidas">325</span>
+                                <div class="curtidas-blogs">
+                                    <img class="coracao-blogs" src="images/heart.png" alt="">
+                                    <span class="numero-curtidas-blogs">325</span>
                                 </div>
                             </div>
                         </div>
 
                     </a>
                 </div>
-                <div class="box-blog">
-                    <a href="blog.html">
-                        <div class="image">
+                <div class="box-blog-blogs">
+                    <a href="blog.html-blogs">
+                        <div class="image-blogs">
                             <img src="images/blog.png" alt="">
                         </div>
-                        <div class="descricao">
-                            <h2 class="titulo">Marketing Digital</h2>
-                            <h4 class="subtitulo">Como pesquisar palavras-chave
+                        <div class="descricao-blogs">
+                            <h2 class="titulo-blogs">Marketing Digital</h2>
+                            <h4 class="subtitulo-blogs">Como pesquisar palavras-chave
                                 No google ADS</h4>
                             <p></p>
-                            <div class="pessoa">
-                                <div class="perfil">
-                                    <img class="img-pessoa" src="" alt="">
-                                    <div class="descricao-pessoa">
-                                        <h4 class="titulo-pessoa">Mateus Matos</h4>
-                                        <span class="minutos">2 minutes ago</span>
+                            <div class="pessoa-blogs">
+                                <div class="perfil-blogs">
+                                    <img class="img-pessoa-blogs" src="" alt="">
+                                    <div class="descricao-pessoa-blogs">
+                                        <h4 class="titulo-pessoa-blogs">Mateus Matos</h4>
+                                        <span class="minutos-blogs">2 minutes ago</span>
                                     </div>
                                 </div>
-                                <div class="curtidas">
-                                    <img class="coracao" src="images/heart.png" alt="">
-                                    <span class="numero-curtidas">325</span>
+                                <div class="curtidas-blogs">
+                                    <img class="coracao-blogs" src="images/heart.png" alt="">
+                                    <span class="numero-curtidas-blogs">325</span>
                                 </div>
                             </div>
                         </div>
@@ -119,7 +119,7 @@
                     </a>
                 </div>
             </div>
-            <a class="mais" href="">
+            <a class="mais-blogs" href="">
                 +
             </a>
         </div>

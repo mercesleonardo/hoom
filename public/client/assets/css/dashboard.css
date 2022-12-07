@@ -7,7 +7,7 @@
     background-color: #08001C;
 }
 
-.topo-lateral {
+.topo-lateral-dashboard {
     position: absolute;
     left: 0;
     width: 137px;
@@ -19,18 +19,18 @@
     align-items: center;
 }
 
-.logo-hoom {
+.logo-hoom-dashboard {
     position: absolute;
     bottom: 36px;
     left: 55px;
     width: 133px;
 }
 
-.logo-hoom img {
+.logo-hoom-dashboard img {
     width: 100%;
 }
 
-.rede-lateral {
+.rede-lateral-dashboard {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -39,7 +39,7 @@
     margin-top: 99px;
 }
 
-.rede-lateral:before {
+.rede-lateral-dashboard:before {
     content:
         '';
     width: 1px;
@@ -48,7 +48,7 @@
     margin-bottom: 17px;
 }
 
-.rede-lateral:after {
+.rede-lateral-dashboard:after {
     content: '';
     width: 1px;
     height: 134px;
@@ -69,7 +69,7 @@
     position: relative;
 }
 
-.engloba-titulo {
+.engloba-titulo-dashboard {
     width: 100%;
     margin-bottom: 44px;
     display: flex;
@@ -77,7 +77,7 @@
     position: relative;
 }
 
-.engloba-titulo:after {
+.engloba-titulo-dashboard:after {
     content:
         '';
     width: 100%;
@@ -90,9 +90,9 @@
     bottom: -27px;
 }
 
-.ld1-titulo {}
+.ld1-titulo-dashboard {}
 
-.ld1-titulo .titulo {
+.ld1-titulo-dashboard .titulo-dashboard {
     color: #FFFFFF;
     font-size: 31px;
     margin-right: 37px;
@@ -102,7 +102,7 @@
     margin-bottom: 9px;
 }
 
-.ld1-titulo p {
+.ld1-titulo-dashboard p {
     color: #AAB2B7;
     font-size: 14px;
     width: 251px;
@@ -112,9 +112,9 @@
     line-height: 21px;
 }
 
-.ld2-titulo {}
+.ld2-titulo-dashboard {}
 
-.conteudo-box {
+.conteudo-box-dashboard {
     margin-top: 30px;
     display: flex;
     flex-wrap: wrap;
@@ -131,7 +131,7 @@
     border-radius: 25px;
 }
 
-.box-dashboard .mais-box {
+.box-dashboard .mais-box-dashboard {
     border: 1px solid #6F3BED;
     color: #5CFFC4;
     width: 69.43px;
@@ -153,7 +153,7 @@
     display: flex;
 }
 
-.box-dashboard .titulo {
+.box-dashboard .titulo-dashboard {
 
     color: #5CFFC4;
 
@@ -166,7 +166,7 @@
     margin-top: 16px;
 }
 
-.mais {
+.mais-dashboard {
     position: absolute;
     right: 22px;
     bottom: 58px;

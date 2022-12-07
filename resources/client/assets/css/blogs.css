@@ -7,7 +7,7 @@
     background-color: #08001C;
 }
 
-.topo-lateral {
+.topo-lateral-blogs {
     position: absolute;
     left: 0;
     width: 137px;
@@ -19,18 +19,18 @@
     align-items: center;
 }
 
-.logo-hoom {
+.logo-hoom-blogs {
     position: absolute;
     bottom: 36px;
     left: 55px;
     width: 133px;
 }
 
-.logo-hoom img {
+.logo-hoom-blogs img {
     width: 100%;
 }
 
-.rede-lateral {
+.rede-lateral-blogs {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -39,7 +39,7 @@
     margin-top: 99px;
 }
 
-.rede-lateral:before {
+.rede-lateral-blogs:before {
     content:
         '';
     width: 1px;
@@ -48,7 +48,7 @@
     margin-bottom: 17px;
 }
 
-.rede-lateral:after {
+.rede-lateral-blogs:after {
     content: '';
     width: 1px;
     height: 134px;
@@ -69,7 +69,7 @@
     position: relative;
 }
 
-.engloba-titulo {
+.engloba-titulo-blogs {
     width: 100%;
     margin-bottom: 44px;
     display: flex;
@@ -78,7 +78,7 @@
     align-items: center;
 }
 
-.titulo-principal {
+.titulo-principal-blogs {
     color: #FFFFFF;
     font-size: 31px;
     margin-right: 37px;
@@ -88,15 +88,15 @@
     display: flex;
     align-items: center;
 }
- .esq{
+ .esq-blogs{
     display: flex;
     margin-right: 23px;
 }
- .img-esq{
+ .img-esq-blogs{
     width: 12px;
     height: 31px;
 }
-.engloba-titulo:after {
+.engloba-titulo-blogs:after {
     content:
         '';
     width: 100%;
@@ -118,7 +118,7 @@
     flex-direction: row;
 }
 
-.box-blog {
+.box-blogs {
     width: 31.8%;
     min-width: 268px;
     border: 1px solid #5CFFC4;
@@ -129,31 +129,31 @@
     flex-direction: column;
     padding: 16px;
 }
-.image{
+.image-blogs{
     width: 100%;
     height: 227px;
     border-radius: 5px;
     overflow: hidden;
 }
-.image img{
+.image-blogs img{
     width: 100%;
     height: 100%;
 }
-.descricao{
+.descricao-blogs{
     padding-top: 27px;
 }
-.descricao-pessoa{
+.descricao-pessoa-blogs{
     
 margin-left: 14px;
 }
-.titulo{
+.titulo-blogs{
     color: #AAB2B7;
     font-size: 8px;
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
     margin-bottom: 14px;
 }
-.subtitulo{
+.subtitulo-blogs{
     
 color: #FFFFFF;
     
@@ -165,29 +165,29 @@ font-weight: 400;
     
 line-height: 22px;
 }
-.pessoa{
+.pessoa-blogs{
     display:
     flex;
     width: 100%;
     justify-content: space-between;
     margin-top: 25px;
 }
-.perfil{
+.perfil-blogs{
     display: flex;
     align-items: center;
 }
-.img-pessoa{
+.img-pessoa-blogs{
     width: 37.6px;
     height: 37.6px;
     border-radius: 100%;
     overflow: hidden;
     background: #ccc;
 }
-.curtidas{
+.curtidas-blogs{
     display: flex;
     align-items: center;
 }
-.titulo-pessoa{
+.titulo-pessoa-blogs{
     
 color: #FFFFFF;
     
@@ -199,7 +199,7 @@ font-weight: 400;
     
 line-height: 13px;
 }
-.minutos{
+.minutos-blogs{
     
 color: #AAB2B7;
     
@@ -209,11 +209,11 @@ font-family: 'Poppins', sans-serif;
     
 font-weight: 400;
 }
-.coracao{
+.coracao-blogs{
     
 width: 9.93px;
 }
-.numero-curtidas{
+.numero-curtidas-blogs{
     
 font-size: 9px;
     
@@ -225,7 +225,7 @@ color: #AAB2B7;
     
 margin-left: 8px;
 }
-.mais {
+.mais-blogs {
     position: absolute;
     right: 22px;
     bottom: 58px;

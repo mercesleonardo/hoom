@@ -6,7 +6,7 @@
     background-size: cover;
     background-color: #08001C;
 }
-.topo-lateral{
+.topo-lateral-home{
     position: absolute;
     left: 0;
     width: 137px;
@@ -17,16 +17,16 @@
     justify-content: center;
     align-items: center;
 }
-.logo-hoom{
+.logo-hoom-home{
     position: absolute;
     top: 36px;
     left: 55px;
     width: 133px;
 }
-.logo-hoom img{
+.logo-hoom-home img{
     width:100%;
 }
-.rede-lateral{
+.rede-lateral-home{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -34,7 +34,7 @@
     gap: 17px 0;
     margin-top: 99px;
 }
-.rede-lateral:before{
+.rede-lateral-home:before{
     content:
     '';
     width: 1px;
@@ -42,14 +42,14 @@
     background: #5CFFC4;
     margin-bottom: 17px;
 }
-.rede-lateral:after{
+.rede-lateral-home:after{
     content: '';
     width: 1px;
     height: 134px;
     background: #5CFFC4;
     margin-top: 17px;
 }
-.conteudo{
+.conteudo-home{
     width: 33%;
     margin-right: auto;
     height: 100vh;
@@ -60,24 +60,24 @@
     justify-content: center;
     padding-top: 34px;
 }
-.conteudo .image{
+.conteudo-home .image-home{
     width: 244.48px;
     height: 251.48px;
     margin: 0 auto;
     display: flex;
 }
-.conteudo .image img{
+.conteudo-home .image-home img{
     width: 100%;
     height: 100%;
 }
-.texto{
+.texto-home{
     display: flex;
     align-items: center;
     width: 100%;
     margin-bottom: 30px;
     margin-top: 58px;
 }
-.texto .titulo{
+.texto-home .titulo-home{
     color: #FFFFFF;
     font-size: 30px;
     margin-right: 37px;
@@ -85,7 +85,7 @@
     font-weight: 600;
     line-height: 33px;
 }
-.texto p{
+.texto-home p{
     color: #778087;
     font-size: 13px;
     width: 251px;
@@ -94,11 +94,11 @@
     margin: 0;
     line-height: 21px;
 }
-.btn-acessar{
+.btn-acessar-home{
     
 width: 100%;
 }
-.btn-acessar a{
+.btn-acessar-home a{
     width: 100%;
     height: 48.36px;
     background: linear-gradient(to right, #AF37DE , #683EE4);
@@ -111,13 +111,13 @@ width: 100%;
     font-weight: 600;
     font-size: 17px;
 }
-.btn-criar{
+.btn-criar-home{
     
 margin: 0 auto;
     
 margin-top: 32px;
 }
-.btn-criar a{
+.btn-criar-home a{
     
 color: #fff;
     
@@ -135,7 +135,7 @@ font-weight: 600;
     
 font-size: 17px;
 }
-.btn-criar a span{
+.btn-criar-home a span{
     
 margin-bottom: 5px;
 }
