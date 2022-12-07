@@ -24,7 +24,7 @@
             <div class="engloba-titulo-projects">
                 <div class="ld1-titulo-projects">
                     <h4 class="titulo-projects">
-                        <a class="esq-projects" href="dashboard.html">
+                        <a class="esq-projects" href="{{ route('dashboard') }}">
                             <img class="img-esq-projects" src="images/esq.png" alt="">
                         </a>Meus Projetos
                     </h4>
@@ -43,7 +43,7 @@
                         </h4>
                         <span class="separador-projects"></span>
                         <div class="btn-projetos">
-                            <a href="projeto.html">Ver projeto</a>
+                            <a href="{{ route('project') }}">Ver projeto</a>
                         </div>
                     </div>
                     <div class="ld2-projetos">
@@ -60,7 +60,7 @@
                         </h4>
                         <span class="separador-projects"></span>
                         <div class="btn-projetos">
-                            <a href="projetos.html">Ver projeto</a>
+                            <a href="{{ route('project') }}">Ver projeto</a>
                         </div>
                     </div>
                     <div class="ld2-projetos">
@@ -77,7 +77,7 @@
                         </h4>
                         <span class="separador-projects"></span>
                         <div class="btn-projetos">
-                            <a href="projeto.html">Projeto Parado</a>
+                            <a href="{{ route('project') }}">Projeto Parado</a>
                         </div>
                     </div>
                     <div class="ld2-projetos">

@@ -4,9 +4,7 @@
     <section class="sec-dashboard" style="background-image:url(images/pd-dashboard.png);">
         <div class="topo-lateral-dashboard">
             <div class="logo-hoom-dashboard">
-                <a href="">
                     <img src="images/logo.png" alt="">
-                </a>
             </div>
             <div class="rede-lateral-dashboard">
                 <a href="">
@@ -34,37 +32,37 @@
             </div>
             <div class="conteudo-box-dashboard">
                 <div class="box-dashboard">
-                    <a href="projetos.html">
+                    <a href="{{ route('projects') }}">
                         <img src="images/icone-dashboard1.png" alt="">
                         <h4 class="titulo-dashboard">Meus Projetos</h4>
                     </a>
                 </div>
                 <div class="box-dashboard">
-                    <a href="aprovacao.html">
+                    <a href="{{ route('approval') }}">
                         <img src="images/icone-dashboard2.png" alt="">
                         <h4 class="titulo-dashboard">Aprovações</h4>
                     </a>
                 </div>
                 <div class="box-dashboard">
-                    <a href="solicitacao.html">
+                    <a href="{{ route('solicitation') }}">
                         <img src="images/icone-dashboard3.png" alt="">
                         <h4 class="titulo-dashboard">Solicitação</h4>
                     </a>
                 </div>
                 <div class="box-dashboard">
-                    <a href="atendimento.html">
+                    <a href="{{ route('attendance') }}">
                         <img src="images/icone-dashboard4.png" alt="">
                         <h4 class="titulo-dashboard">Atendimento</h4>
                     </a>
                 </div>
                 <div class="box-dashboard">
-                    <a href="arquivo.html">
+                    <a href="{{ route('file') }}">
                         <img src="images/icone-dashboard5.png" alt="">
                         <h4 class="titulo-dashboard">Enviar Arquivos</h4>
                     </a>
                 </div>
                 <div class="box-dashboard">
-                    <a href="blogs.html">
+                    <a href="{{ route('blogs') }}">
                         <img src="images/icone-dashboard6.png" alt="">
                         <h4 class="titulo-dashboard">BLOG</h4>
                     </a>
