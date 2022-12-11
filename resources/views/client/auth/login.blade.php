@@ -27,7 +27,18 @@
             </div>
             <div class="acessar-login">
                 <h4 class="titulo-login">Acessar</h4>
-                <form action="{{ route('login') }}" method="POST">
+
+                <section id= "task_section">
+                    @if ($errors->any())
+                        <ul class="alert alert-error">
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    @endif
+                </section>
+
+                <form action="{{ route('login.action') }}" method="POST">
                     @csrf
 
                     <label for="email">

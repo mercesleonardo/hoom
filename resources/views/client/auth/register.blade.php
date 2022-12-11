@@ -26,7 +26,17 @@
             </div>
             <div class="acessar-register">
 
-                <form action="{{ route('register') }}" method="POST">
+                <section id= "task_section">
+                    @if ($errors->any())
+                        <ul class="alert alert-error">
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    @endif
+                </section>
+
+                <form action="{{ route('register.store') }}" method="POST">
                     @csrf
 
                     <label for="name">
@@ -45,7 +55,7 @@
                         <input type="password" name="password" id="password" placeholder="Crie sua Senha" required>
                     </label>
                     <label for="password_confirmation">
-                        <input type="password" name="password" id="password" placeholder="Confirme sua Senha" required>
+                        <input type="password" name="password_confirmation" id="password_confirmation" placeholder="Confirme sua Senha" required>
                     </label>
 
                     <button type="submit" class="btn-acessar-register">Cadastrar</button>

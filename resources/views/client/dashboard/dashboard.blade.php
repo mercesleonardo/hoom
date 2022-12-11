@@ -32,37 +32,37 @@
             </div>
             <div class="conteudo-box-dashboard">
                 <div class="box-dashboard">
-                    <a href="{{ route('projects') }}">
+                    <a href="#">
                         <img src="images/icone-dashboard1.png" alt="">
                         <h4 class="titulo-dashboard">Meus Projetos</h4>
                     </a>
                 </div>
                 <div class="box-dashboard">
-                    <a href="{{ route('approval') }}">
+                    <a href="#">
                         <img src="images/icone-dashboard2.png" alt="">
                         <h4 class="titulo-dashboard">Aprovações</h4>
                     </a>
                 </div>
                 <div class="box-dashboard">
-                    <a href="{{ route('solicitation') }}">
+                    <a href="#">
                         <img src="images/icone-dashboard3.png" alt="">
                         <h4 class="titulo-dashboard">Solicitação</h4>
                     </a>
                 </div>
                 <div class="box-dashboard">
-                    <a href="{{ route('attendance') }}">
+                    <a href="#">
                         <img src="images/icone-dashboard4.png" alt="">
                         <h4 class="titulo-dashboard">Atendimento</h4>
                     </a>
                 </div>
                 <div class="box-dashboard">
-                    <a href="{{ route('file') }}">
+                    <a href="#">
                         <img src="images/icone-dashboard5.png" alt="">
                         <h4 class="titulo-dashboard">Enviar Arquivos</h4>
                     </a>
                 </div>
                 <div class="box-dashboard">
-                    <a href="{{ route('blogs') }}">
+                    <a href="#">
                         <img src="images/icone-dashboard6.png" alt="">
                         <h4 class="titulo-dashboard">BLOG</h4>
                     </a>

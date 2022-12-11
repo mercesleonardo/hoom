@@ -11,10 +11,11 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 
 //Login
 Route::get('/login', [LoginController::class, 'index'])->name('login');
+Route::post('/login', [LoginController::class, 'login_action'])->name('login.action');
 
 //Register
 Route::get('/register', [RegisterController::class, 'index'])->name('register');
-Route::post('/register', [RegisterController::class, 'store'])->name('register');
+Route::post('/register', [RegisterController::class, 'store'])->name('register.store');
 
 //Dashboard
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard')->middleware('auth');
