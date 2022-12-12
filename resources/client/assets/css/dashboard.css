@@ -114,6 +114,16 @@
 
 .ld2-titulo-dashboard {}
 
+.ld2-titulo-dashboard span {
+    color:#FFFFFF;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    margin: 0;
+    line-height: 21px;
+    background: linear-gradient(to right, #AF37DE, #683EE4);
+}
+
 .conteudo-box-dashboard {
     margin-top: 30px;
     display: flex;

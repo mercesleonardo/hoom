@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 
 class RegisterController extends Controller
@@ -15,8 +16,11 @@ class RegisterController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-
+    {   
+        $isLoggedIn = Auth::check();
+        if($isLoggedIn) {
+            return redirect()->route('dashboard');
+        }
         return view('client.auth.register');
     }
 

@@ -19,3 +19,4 @@ Route::post('/register', [RegisterController::class, 'store'])->name('register.s
 
 //Dashboard
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard')->middleware('auth');
+Route::get('/logout', [DashboardController::class, 'logout'])->name('logout')->middleware('auth');
