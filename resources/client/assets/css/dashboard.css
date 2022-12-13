@@ -112,7 +112,27 @@
     line-height: 21px;
 }
 
-.ld2-titulo-dashboard {}
+.ld2-titulo-dashboard {
+    margin-top: 30px;
+}
+
+.ld2-titulo-dashboard .logout-button {
+    color: #FFFFFF;
+    background-color: #6F3BED;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    margin: 0;
+    line-height: 21px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.ld2-titulo-dashboard .logout-button:hover {
+    color: #FFFFFF;
+    background-color: #320c8d;
+}
 
 
 

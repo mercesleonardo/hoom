@@ -25,7 +25,10 @@
                     <p>{{ strftime('%A, %d de %B de %Y', strtotime('today')) }}</p>
                 </div>
                 <div class="ld2-titulo-dashboard">
-                    <img src="images/icone-home.png">
+                    <a href="{{route('logout')}}" class="logout-button">
+                        <span>Sair</span>
+                        {{-- <img src="images/icone-home.png"> --}}
+                    </a>
                 </div>
             </div>
             <div class="conteudo-box-dashboard">
