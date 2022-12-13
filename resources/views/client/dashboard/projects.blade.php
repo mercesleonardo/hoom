@@ -4,9 +4,9 @@
     <section class="sec-projetos" style="background-image:url(images/pd-dashboard.png);">
         <div class="topo-lateral-projects">
             <div class="logo-hoom-projects">
-                <a href="">
+
                     <img src="images/logo.png" alt="">
-                </a>
+
             </div>
             <div class="rede-lateral-projects">
                 <a href="">
@@ -30,9 +30,7 @@
                     </h4>
                 </div>
                 <div class="ld2-titulo-projects">
-                    <a href="">
                         <img src="images/icone-home.png" alt="">
-                    </a>
                 </div>
             </div>
             <div class="conteudo-box-projetos">

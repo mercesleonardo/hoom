@@ -12,9 +12,7 @@
                     </h4>
                 </div>
                 <div class="ld2-titulo">
-                    <a href="">
                         <img src="images/icone-home.png" alt="">
-                    </a>
                 </div>
             </div>
             <div class="conteudo-box-projeto">

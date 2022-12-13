@@ -4,9 +4,7 @@
     <section class="sec-blogs" style="background-image:url(images/pd-dashboard.png);">
         <div class="topo-lateral-blogs">
             <div class="logo-hoom-blogs">
-                <a href="">
-                    <img src="images/logo.png" alt="">
-                </a>
+                <img src="images/logo.png" alt="">
             </div>
             <div class="rede-lateral-blogs">
                 <a href="">
@@ -24,21 +22,19 @@
             <div class="engloba-titulo-blogs">
                 <div class="ld1-titulo-blogs">
                     <h4 class="titulo-principal-blogs">
-                        <a class="esq-blogs" href="dashboard.html">
+                        <a class="esq-blogs" href="{{ route('dashboard') }}">
                             <img class="img-esq-blogs" src="images/esq.png" alt="">
                         </a>Blogs
                     </h4>
                 </div>
                 <div class="ld2-titulo-blogs">
-                    <a href="">
-                        <img src="images/icone-home.png" alt="">
-                    </a>
+                    <img src="images/icone-home.png" alt="">
                 </div>
             </div>
 
             <div class="conteudo-box-blogs">
                 <div class="box-blogs">
-                    <a href="blog.html">
+                    <a href="{{route('blog')}}">
                         <div class="image-blogs">
                             <img src="images/blog.png" alt="">
                         </div>
@@ -65,7 +61,7 @@
                     </a>
                 </div>
                 <div class="box-blogs">
-                    <a href="blog.html">
+                    <a href="{{route('blog')}}">
                         <div class="image-blogs">
                             <img src="images/blog.png" alt="">
                         </div>
@@ -91,8 +87,9 @@
 
                     </a>
                 </div>
-                <div class="box-blog-blogs">
-                    <a href="blog.html-blogs">
+
+                <div class="box-blogs">
+                    <a href="{{route('blog')}}">
                         <div class="image-blogs">
                             <img src="images/blog.png" alt="">
                         </div>
@@ -103,7 +100,7 @@
                             <p></p>
                             <div class="pessoa-blogs">
                                 <div class="perfil-blogs">
-                                    <img class="img-pessoa-blogs" src="" alt="">
+                                    <img class="img-pessoa"-blogs src="" alt="">
                                     <div class="descricao-pessoa-blogs">
                                         <h4 class="titulo-pessoa-blogs">Mateus Matos</h4>
                                         <span class="minutos-blogs">2 minutes ago</span>
@@ -118,6 +115,7 @@
 
                     </a>
                 </div>
+
             </div>
             <a class="mais-blogs" href="">
                 +

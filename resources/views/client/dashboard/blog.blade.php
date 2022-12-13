@@ -4,9 +4,7 @@
     <section class="sec-blog" style="background-image:url(images/pd-dashboard.png);">
         <div class="topo-lateral-blog">
             <div class="logo-hoom-blog">
-                <a href="">
-                    <img src="images/logo.png" alt="">
-                </a>
+                <img src="images/logo.png" alt="">
             </div>
             <div class="rede-lateral-blog">
                 <a href="">
@@ -24,15 +22,13 @@
             <div class="engloba-titulo-blog">
                 <div class="ld1-titulo-blog">
                     <h4 class="titulo-principal-blog">
-                        <a class="esq-blog" href="blogs.html">
+                        <a class="esq-blog" href="{{ route('blogs') }}">
                             <img class="img-esq-blog" src="images/esq.png" alt="">
                         </a>Blog
                     </h4>
                 </div>
                 <div class="ld2-titulo-blog">
-                    <a href="">
                         <img src="images/icone-home.png" alt="">
-                    </a>
                 </div>
             </div>
 
