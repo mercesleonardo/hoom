@@ -21,13 +21,12 @@
         <div class="conteudo-dashboard">
             <div class="engloba-titulo-dashboard">
                 <div class="ld1-titulo-dashboard">
-                    <h4 class="titulo-dashboard">{{$AuthUser->name}}</h4>
+                    <h4 class="titulo-dashboard">Olá {{$names}}</h4>
                     <p>Segunda Feira, 22/03/2021</p>
                 </div>
                 <div class="ld2-titulo-dashboard">
-                    <a href="">
-                        <span>Sair</span>
-                        {{-- <img src="images/icone-home.png" alt="Sair"> --}}
+                    <a href="{{route('logout')}}" class="btn-logout">
+                        <img src="images/icone-home.png">
                     </a>
                 </div>
             </div>

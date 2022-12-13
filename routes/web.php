@@ -6,6 +6,14 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\DashboardController;
 
+
+// Middleware Authentication
+Route::middleware(['auth'])->group(function() {
+    //Dashboard
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+    Route::get('/logout', [DashboardController::class, 'logout'])->name('logout');
+});
+
 //Home
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
@@ -17,6 +25,3 @@ Route::post('/login', [LoginController::class, 'login_action'])->name('login.act
 Route::get('/register', [RegisterController::class, 'index'])->name('register');
 Route::post('/register', [RegisterController::class, 'store'])->name('register.store');
 
-//Dashboard
-Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard')->middleware('auth');
-Route::get('/logout', [DashboardController::class, 'logout'])->name('logout')->middleware('auth');

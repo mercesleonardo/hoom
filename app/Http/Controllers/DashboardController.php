@@ -14,10 +14,12 @@ class DashboardController extends Controller
     public function index(Request $request){
         // dd(Auth::user());
         $AuthUser = Auth::user();
-        return view('client.dashboard.dashboard', ['AuthUser' => $AuthUser]);
+        $names = collect(explode(' ', Auth::user()->name))->slice(0, 1)->implode(' ');
+        return view('client.dashboard.dashboard', ['AuthUser' => $AuthUser, 'names' => $names]);
     }
 
     public function logout() {
-        
+        Auth::logout();
+        return redirect()->route('home');
     }
 }
