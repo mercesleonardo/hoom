@@ -26,7 +26,7 @@
             </div>
             <div class="acessar-register">
 
-                <section id= "task_section">
+                <section id="task_section">
                     @if ($errors->any())
                         <ul class="alert alert-error">
                             @foreach ($errors->all() as $error)
@@ -40,29 +40,29 @@
                     @csrf
 
                     <label for="name">
-                        <input type="text" name="name" id="name" placeholder="Nome" value="{{ old('name') }}"
-                            required>
+                        <input type="text" name="name" id="name" placeholder="Nome" value="{{ old('name') }}">
                     </label>
                     <label for="phone">
                         <input type="text" name="phone" id="phone" placeholder="Telefone"
-                            value="{{ old('phone') }}" required>
+                            value="{{ old('phone') }}">
                     </label>
                     <label for="email">
-                        <input type="email" name="email" id="email" placeholder="E-mail" value="{{ old('email') }}"
-                            required>
+                        <input type="email" name="email" id="email" placeholder="E-mail"
+                            value="{{ old('email') }}">
                     </label>
                     <label for="password">
-                        <input type="password" name="password" id="password" placeholder="Crie sua Senha" required>
+                        <input type="password" name="password" id="password" placeholder="Crie sua Senha">
                     </label>
                     <label for="password_confirmation">
-                        <input type="password" name="password_confirmation" id="password_confirmation" placeholder="Confirme sua Senha" required>
+                        <input type="password" name="password_confirmation" id="password_confirmation"
+                            placeholder="Confirme sua Senha">
                     </label>
 
                     <button type="submit" class="btn-acessar-register">Cadastrar</button>
                 </form>
 
                 <div class="btn-criar-register">
-                    <a href="{{route('login')}}"><span class="criar">Ou</span>Acessar minha conta</a>
+                    <a href="{{ route('login') }}"><span class="criar">Ou</span>Acessar minha conta</a>
                 </div>
             </div>
         </div>

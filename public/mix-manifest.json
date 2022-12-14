@@ -1,13 +1,1 @@
-{
-    "/js/app.js": "/js/app.js",
-    "/css/app.css": "/css/app.css",
-    "/client/assets/css/global.css": "/client/assets/css/global.css",
-    "/client/assets/css/home.css": "/client/assets/css/home.css",
-    "/client/assets/css/login.css": "/client/assets/css/login.css",
-    "/client/assets/css/register.css": "/client/assets/css/register.css",
-    "/client/assets/css/projects.css": "/client/assets/css/projects.css",
-    "/client/assets/css/project.css": "/client/assets/css/project.css",
-    "/client/assets/css/dashboard.css": "/client/assets/css/dashboard.css",
-    "/client/assets/css/blogs.css": "/client/assets/css/blogs.css",
-    "/client/assets/css/blog.css": "/client/assets/css/blog.css"
-}
+{}

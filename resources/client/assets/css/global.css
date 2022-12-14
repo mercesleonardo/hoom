@@ -297,3 +297,19 @@ img{
     object-fit: cover;    
 }
 
+.alert{
+    margin-bottom: 22px;
+    gap: 6px 0;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 22px;
+ }
+ .alert li{
+     padding: 12px 19px;
+     background: #fff;
+     border-radius: 25px;
+     font-family: 'Poppins', sans-serif;
+     font-weight: 400;
+     font-size: 15px;
+ }
+ .alert-error li{background: red;color: #fff;}
