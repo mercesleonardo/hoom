@@ -68,13 +68,13 @@
                         <h4 class="titulo-dashboard">BLOG</h4>
                     </a>
                 </div>
-                <div class="box-dashboard">
+                {{-- <div class="box-dashboard">
                     <a href="">
                         <span class="mais-box-dashboard">
                             +
                         </span>
                     </a>
-                </div>
+                </div> --}}
             </div>
             <a class="mais-dashboard" href="">
                 +
