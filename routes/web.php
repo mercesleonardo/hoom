@@ -52,7 +52,7 @@ Route::post('/login', [LoginController::class, 'login_action'])->name('login.act
 Route::get('/register', [RegisterController::class, 'index'])->name('register');
 Route::post('/register', [RegisterController::class, 'store'])->name('register.store');
 
-Route::get('/admin', function() {
+Route::get('/painel', function() {
     return view('admin.dashboard');
 });
 

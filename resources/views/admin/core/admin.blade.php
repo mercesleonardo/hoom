@@ -41,7 +41,7 @@
     </head>
 
     <!-- body start -->
-    <body class="loading" data-layout='{"mode": "{{$settingTheme->color_scheme_mode}}", "width": "fluid", "menuPosition": "fixed", "sidebar": { "color": "{{$settingTheme->leftsidebar_color}}", "size": "{{$settingTheme->leftsidebar_size}}", "showuser": false}, "topbar": {"color": "{{$settingTheme->topbar_color}}"}, "showRightSidebarOnPageLoad": false}'>
+    <body class="loading" data-layout='{"mode": "", "width": "fluid", "menuPosition": "fixed", "sidebar": { "color": "", "size": "", "showuser": false}, "topbar": {"color": ""}, "showRightSidebarOnPageLoad": false}'>
 
         <!-- Begin page -->
         <div id="wrapper">
@@ -309,7 +309,7 @@
 
         </div>
         <!-- END wrapper -->
-        @include('Admin.components.models.settingsTheme')
+        {{-- @include('Admin.components.models.settingsTheme') --}}
 
         <!-- Right bar overlay-->
         <div class="rightbar-overlay"></div>
