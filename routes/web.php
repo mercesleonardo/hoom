@@ -11,6 +11,8 @@ use App\Http\Controllers\ApprovalController;
 use App\Http\Controllers\SolicitationController;
 use App\Http\Controllers\AttendanceController;
 use App\Http\Controllers\FileController;
+use App\Http\Controllers\PainelController;
+use App\Http\Controllers\LoginadminController;
 
 
 // Middleware Authentication client
@@ -56,8 +58,10 @@ Route::post('/register', [RegisterController::class, 'store'])->name('register.s
 
 // Middleware Authentication admin
 Route::middleware(['admin'])->group(function() {
-    Route::get('/painel', function() {
-        return view('admin.dashboard');
-    });
+
+    Route::get('/painel', [PainelController::class, 'index'])->name('painel');
 });
+
+Route::get('/loginadmin', [LoginadminController::class, 'index'])->name('loginadmin');
+Route::post('/loginadmin', [LoginadminController::class, 'login_action'])->name('loginadmin.action');
 
