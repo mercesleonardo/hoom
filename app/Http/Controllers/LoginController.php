@@ -15,7 +15,10 @@ class LoginController extends Controller
 
         $isLoggedIn = Auth::check();
         if($isLoggedIn) {
-            return redirect()->route('dashboard');
+            if(Auth::user()->client == 1) {
+                return redirect()->route('dashboard');
+            }
+            
         }
         return view('client.auth.login');
     }

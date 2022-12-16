@@ -51,7 +51,7 @@ class RegisterController extends Controller
 
         ]);
 
-        $data = $request->only('name', 'email', 'phone', 'password');
+        $data = $request->only('name', 'email', 'phone', 'password', 'client', 'admin');
         $data['password'] = Hash::make($data['password']);
         User::create($data);
 

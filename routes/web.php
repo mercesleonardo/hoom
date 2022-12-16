@@ -13,8 +13,8 @@ use App\Http\Controllers\AttendanceController;
 use App\Http\Controllers\FileController;
 
 
-// Middleware Authentication
-Route::middleware(['auth'])->group(function() {
+// Middleware Authentication client
+Route::middleware(['client'])->group(function() {
     //Dashboard routes
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
     Route::get('/logout', [DashboardController::class, 'logout'])->name('logout');
@@ -41,18 +41,23 @@ Route::middleware(['auth'])->group(function() {
 
 });
 
-//Home routes
+//Home client routes
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
-//Login routes
+//Login client routes
 Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::post('/login', [LoginController::class, 'login_action'])->name('login.action');
 
-//Register routes
+//Register client routes
 Route::get('/register', [RegisterController::class, 'index'])->name('register');
 Route::post('/register', [RegisterController::class, 'store'])->name('register.store');
 
-Route::get('/painel', function() {
-    return view('admin.dashboard');
+
+
+// Middleware Authentication admin
+Route::middleware(['admin'])->group(function() {
+    Route::get('/painel', function() {
+        return view('admin.dashboard');
+    });
 });
 

@@ -39,6 +39,12 @@
                 <form action="{{ route('register.store') }}" method="POST">
                     @csrf
 
+                    <label for="client">
+                        <input type="hidden" name="client" id="client" value="1">
+                    </label>
+                    <label for="admin">
+                        <input type="hidden" name="admin" id="admin" value="0">
+                    </label>
                     <label for="name">
                         <input type="text" name="name" id="name" placeholder="Nome" value="{{ old('name') }}">
                     </label>
