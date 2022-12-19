@@ -60,6 +60,7 @@ Route::post('/register', [RegisterController::class, 'store'])->name('register.s
 Route::middleware(['admin'])->group(function() {
 
     Route::get('/painel', [PainelController::class, 'index'])->name('painel');
+    Route::get('/logoutadmin', [PainelController::class, 'logout'])->name('logoutadmin');
 });
 
 Route::get('/loginadmin', [LoginadminController::class, 'index'])->name('loginadmin');

@@ -190,7 +190,7 @@
                                 <div class="dropdown-divider"></div>
 
                                 <!-- item-->
-                                <a href="#" class="dropdown-item notify-item">
+                                <a href="{{route('logoutadmin')}}" class="dropdown-item notify-item">
                                     <i class="fe-log-out"></i>
                                     <span>Sair</span>
                                 </a>
@@ -284,6 +284,19 @@
                                 <a nofollow href="#">
                                     <i class="mdi mdi-view-dashboard-outline"></i>
                                     <span> Dashboard </span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a nofollow href="#">
+                                    <i class="mdi mdi-view-dashboard-outline"></i>
+                                    <span> Clientes </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a nofollow href="#">
+                                    <i class="mdi mdi-view-dashboard-outline"></i>
+                                    <span> Projetos </span>
                                 </a>
                             </li>
                         </ul>

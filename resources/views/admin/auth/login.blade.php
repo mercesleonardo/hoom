@@ -41,7 +41,7 @@
                         @csrf
                         <div class="mb-3">
                             <label for="emailaddress" class="form-label">E-mail</label>
-                            <input class="form-control" type="email" name="email" id="emailaddress" required="">
+                            <input class="form-control" type="email" name="email" id="emailaddress" required="" value="{{ old('email') }}">
                         </div>
                         <div class="mb-3">
                             <a href="auth-recoverpw-2.html" class="text-muted float-end"><small>Esqueceu sua senha?</small></a>

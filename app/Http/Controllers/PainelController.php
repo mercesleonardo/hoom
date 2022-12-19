@@ -21,4 +21,10 @@ class PainelController extends Controller
         return view("admin.dashboard", ['AuthUser' => $AuthUser, 'names' => $names]);
 
     }
+
+    public function logout() {
+        Auth::logout();
+        return redirect()->route('logoutadmin');
+    }
+
 }
