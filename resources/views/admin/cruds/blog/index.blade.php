@@ -14,7 +14,7 @@
                                     <li class="breadcrumb-item active">Usuários</li>
                                 </ol>
                             </div>
-                            <h4 class="page-title">Usuários</h4>
+                            <h4 class="page-title">Blogs</h4>
                         </div>
                     </div>
                 </div>
@@ -26,10 +26,10 @@
                             <div class="card-body">
                                 <div class="row mb-3">
                                     <div class="col-6">
-                                        <button id="btSubmitDelete" data-route="{{route('admin.user.destroySelected')}}" type="button" class="btn btn-danger" style="display: none;">Deletar selecionados</button>
+                                        <button id="btSubmitDelete" data-route="{{route('destroy')}}" type="button" class="btn btn-danger" style="display: none;">Deletar selecionados</button>
                                     </div>
                                     <div class="col-6">
-                                        <a href="{{route('admin.user.create')}}" class="btn btn-success float-end">Adicionar novo <i class="mdi mdi-plus"></i></a>
+                                        <a href="{{route('create')}}" class="btn btn-success float-end">Adicionar novo <i class="mdi mdi-plus"></i></a>
                                     </div>
                                 </div>
                                 <table data-toggle="table" data-page-size="5" data-pagination="false" class="table-bordered table-sortable">
@@ -39,36 +39,39 @@
                                             <th class="bs-checkbox">
                                                 <label><input name="btSelectAll" type="checkbox"></label>
                                             </th>
-                                            <th>Nome</th>
-                                            <th>E-mail</th>
+                                            <th>Título</th>
+                                            <th>Descrição</th>
+                                            
                                             <th>Status</th>
                                             <th>Criado em</th>
                                             <th>Ações</th>
                                         </tr>
                                     </thead>
 
-                                    <tbody data-route="{{route('admin.user.sorting')}}">
-                                        @foreach ($users as $key => $user)
+                                    <tbody data-route="#"> {{--<tbody data-route="{{route('admin.user.sorting')}}">--}}
+                                        @foreach ($blogs as $key => $blog)
                                             <tr>
                                                 <td><span class="btnDrag mdi mdi-drag-horizontal font-22"></span></td>
                                                 <td class="bs-checkbox">
-                                                    <label><input data-index="{{$key}}" name="btSelectItem" class="btSelectItem" type="checkbox" value="{{$user->id}}"></label>
+                                                    <label><input data-index="{{$key}}" name="btSelectItem" class="btSelectItem" type="checkbox" value="{{$blog->id}}"></label>
                                                 </td>
-                                                <td>{{$user->name}}</td>
-                                                <td>{{$user->email}}</td>
+                                                <td>{{$blog->title}}</td>
+                                                <td>{{$blog->description}}</td>
+                                                
+                                                <td>{{$blog->author}}</td>
                                                 <td>
-                                                    @switch($user->active)
+                                                    @switch($blog->active)
                                                         @case(0) <span class="badge bg-danger">Inativo</span> @break
                                                         @case(1) <span class="badge bg-success">Ativo</span> @break
                                                     @endswitch
                                                 </td>
-                                                <td>{{Carbon\Carbon::parse($user->created_at)->format('d/m/Y H:i')}}</td>
+                                                <td>{{Carbon\Carbon::parse($blog->created_at)->format('d/m/Y H:i')}}</td>
                                                 <td>
                                                     <div class="row">
                                                         <div class="col-4">
-                                                            <a href="{{route('admin.user.edit',['user' => $user->id])}}" class="btn-icon mdi mdi-square-edit-outline"></a>
+                                                            <a href="{{route('edit',['user' => $blog->id])}}" class="btn-icon mdi mdi-square-edit-outline"></a>
                                                         </div>
-                                                        <form action="{{route('admin.user.destroy',['user' => $user->id])}}" class="col-4" method="POST">
+                                                        <form action="{{route('destroy',['user' => $blog->id])}}" class="col-4" method="POST">
                                                             @method('DELETE') @csrf
                                                             <button type="button" class="btn-icon btSubmitDeleteItem"><i class="mdi mdi-trash-can"></i></button>
                                                         </form>
@@ -81,7 +84,7 @@
 
                                 {{-- PAGINATION --}}
                                 <div class="mt-3 float-end">
-                                    {{$users->links()}}
+                                    {{$blogs->links()}}
                                 </div>
                             </div>
                         </div> <!-- end card-->

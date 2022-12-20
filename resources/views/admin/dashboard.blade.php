@@ -50,7 +50,7 @@
                     </div> <!-- end col-->
 
                     <div class="col-md-6 col-xl-3">
-                        <a nofollow href="#">
+                        <a nofollow href="{{route('admin.blog.index')}}">
                             <div class="widget-rounded-circle card">
                                 <div class="card-body">
                                     <div class="row">
@@ -61,7 +61,7 @@
                                         </div>
                                         <div class="col-12">
                                             <div class="text-center">
-                                                <h4 class="text-dark mt-1">Projetos</h4>
+                                                <h4 class="text-dark mt-1">Blogs</h4>
                                                 <p class="text-muted mb-1">Acessar</p>
                                             </div>
                                         </div>

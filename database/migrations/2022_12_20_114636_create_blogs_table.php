@@ -16,10 +16,13 @@ class CreateBlogsTable extends Migration
         Schema::create('blogs', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->nullable()->constrained('users');
-            $table->string('title');
-            $table->text('description');
-            $table->text('text');
-            $table->string('images');
+            $table->string('author')->nullable();
+            $table->string('title')->nullable();
+            $table->text('description')->nullable();
+            $table->text('text')->nullable();
+            $table->string('path_image')->nullable();
+            $table->string('path_image_author')->nullable();
+            $table->boolean('active')->default(0);
             $table->timestamps();
         });
     }

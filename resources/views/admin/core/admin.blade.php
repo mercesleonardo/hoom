@@ -281,7 +281,7 @@
                             <li class="menu-title">Navegação</li>
 
                             <li>
-                                <a nofollow href="#">
+                                <a nofollow href="{{route('painel')}}">
                                     <i class="mdi mdi-view-dashboard-outline"></i>
                                     <span> Dashboard </span>
                                 </a>
@@ -294,9 +294,9 @@
                                 </a>
                             </li>
                             <li>
-                                <a nofollow href="#">
+                                <a nofollow href="{{route('admin.blog.index')}}">
                                     <i class="mdi mdi-view-dashboard-outline"></i>
-                                    <span> Projetos </span>
+                                    <span> Blogs </span>
                                 </a>
                             </li>
                         </ul>

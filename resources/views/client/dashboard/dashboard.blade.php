@@ -63,7 +63,7 @@
                     </a>
                 </div>
                 <div class="box-dashboard">
-                    <a href="{{route('blogs')}}">
+                    <a href="#">
                         <img src="images/icone-dashboard6.png" alt="">
                         <h4 class="titulo-dashboard">BLOG</h4>
                     </a>

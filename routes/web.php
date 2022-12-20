@@ -26,8 +26,7 @@ Route::middleware(['client'])->group(function() {
     Route::get('/project', [ProjectController::class, 'show'])->name('project');
 
     //Blogs routes
-    Route::get('/blogs', [BlogController::class, 'index'])->name('blogs');
-    Route::get('/blog', [BlogController::class, 'show'])->name('blog');
+    
 
     //Approval routes
     Route::get('/approval', [ApprovalController::class, 'index'])->name('approval');
@@ -61,6 +60,13 @@ Route::middleware(['admin'])->group(function() {
 
     Route::get('/painel', [PainelController::class, 'index'])->name('painel');
     Route::get('/logoutadmin', [PainelController::class, 'logout'])->name('logoutadmin');
+
+    Route::get('/blogs', [BlogController::class, 'index'])->name('admin.blog.index');
+    Route::get('/create', [BlogController::class, 'create'])->name('create');
+    Route::post('/create', [BlogController::class, 'store'])->name('admin.blog.store');
+    Route::get('/edit', [BlogController::class, 'edit'])->name('edit');
+    Route::post('/edit', [BlogController::class, 'update'])->name('update');
+    Route::delete('/delete', [BlogController::class, 'destroy'])->name('destroy');
 });
 
 Route::get('/loginadmin', [LoginadminController::class, 'index'])->name('loginadmin');
