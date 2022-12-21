@@ -62,11 +62,13 @@ Route::middleware(['admin'])->group(function() {
     Route::get('/logoutadmin', [PainelController::class, 'logout'])->name('logoutadmin');
 
     Route::get('/blogs', [BlogController::class, 'index'])->name('admin.blog.index');
-    Route::get('/create', [BlogController::class, 'create'])->name('create');
-    Route::post('/create', [BlogController::class, 'store'])->name('admin.blog.store');
-    Route::get('/edit', [BlogController::class, 'edit'])->name('edit');
-    Route::post('/edit', [BlogController::class, 'update'])->name('update');
-    Route::delete('/delete', [BlogController::class, 'destroy'])->name('destroy');
+    Route::get('/blogs/create', [BlogController::class, 'create'])->name('create');
+    Route::post('blogs/store', [BlogController::class, 'store'])->name('admin.blog.store');
+    Route::get('/blogs/edit/{blog}', [BlogController::class, 'edit'])->name('edit');
+    Route::put('/blogs/update/{blog}', [BlogController::class, 'update'])->name('admin.blog.update');
+    Route::delete('/blogs/delete/{blog}', [BlogController::class, 'destroy'])->name('destroy');
+
+    Route::get('/painel/client', [RegisterController::class, 'painelClient'])->name('admin.client.index');
 });
 
 Route::get('/loginadmin', [LoginadminController::class, 'index'])->name('loginadmin');

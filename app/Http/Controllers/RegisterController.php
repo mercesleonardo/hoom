@@ -24,6 +24,11 @@ class RegisterController extends Controller
         return view('client.auth.register');
     }
 
+    public function painelClient() {
+        $users = User::paginate('20');
+        return view('admin.cruds.client.index', ['users' => $users]);
+    }
+
     /**
      * Show the form for creating a new resource.
      *
