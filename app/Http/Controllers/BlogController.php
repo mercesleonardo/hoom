@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Blog;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use App\Http\Controllers\Helpers\HelperArchive;
 
 class BlogController extends Controller
@@ -88,9 +89,14 @@ class BlogController extends Controller
         $data = $request->all();
 
         $helper = new HelperArchive();
-        $path_image = $helper->renameArchiveUpload($request, 'path_image');
+        $path_image = $helper->optimizeImage($request, 'path_image', $this->pathUpload, null, 100);
 
-        if ($path_image) $data['path_image'] = $this->pathUpload.$path_image;
+        if ($path_image) $data['path_image'] = $path_image;
+
+        $path_image_author = $helper->optimizeImage($request, 'path_image_author', $this->pathUpload, null, 100);
+
+        if ($path_image_author) $data['path_image_author'] = $path_image_author;
+
 
         if(isset($request->delete_path_image) && !$path_image){
             $inputFile = $request->delete_path_image;
@@ -98,15 +104,15 @@ class BlogController extends Controller
             $data['path_image'] = null;
         }
 
-        $path_image_author = $helper->renameArchiveUpload($request, 'path_image_author');
+        // $path_image_author = $helper->renameArchiveUpload($request, 'path_image_author');
 
-        if ($path_image_author) $data['path_image_author'] = $this->pathUpload.$path_image_author;
+        // if ($path_image_author) $data['path_image_author'] = $this->pathUpload.$path_image_author;
 
-        if(isset($request->delete_path_image_author) && !$path_image_author){
-            $inputFile = $request->delete_path_image_author;
-            Storage::delete($benefitSection->$inputFile);
-            $data['path_image_author'] = null;
-        }
+        // if(isset($request->delete_path_image_author) && !$path_image_author){
+        //     $inputFile = $request->delete_path_image_author;
+        //     Storage::delete($benefitSection->$inputFile);
+        //     $data['path_image_author'] = null;
+        // }
 
 
 
@@ -117,7 +123,7 @@ class BlogController extends Controller
         if($path_image) $request->file('path_image')->storeAs($this->pathUpload, $path_image);
         if($path_image_author) $request->file('path_image_author')->storeAs($this->pathUpload, $path_image_author);
 
-        return view('admin.cruds.blog.index'); 
+        return redirect()->route('admin.blog.index'); 
     }
 
     /**
