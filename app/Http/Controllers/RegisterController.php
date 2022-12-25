@@ -16,7 +16,7 @@ class RegisterController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {   
+    {
         $isLoggedIn = Auth::check();
         if($isLoggedIn) {
             return redirect()->route('dashboard');
@@ -103,9 +103,15 @@ class RegisterController extends Controller
      * @param  \App\Models\Register  $register
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Register $register)
+    public function destroy($id)
     {
         //
+        if (!$user = User::find($id)) {
+            return redirect()->route('admin.client.index');
+        }
+        $user->delete();
+
+        return redirect()->back();
     }
 
 }

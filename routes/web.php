@@ -26,7 +26,7 @@ Route::middleware(['client'])->group(function() {
     Route::get('/project', [ProjectController::class, 'show'])->name('project');
 
     //Blogs routes
-    
+
 
     //Approval routes
     Route::get('/approval', [ApprovalController::class, 'index'])->name('approval');
@@ -69,6 +69,7 @@ Route::middleware(['admin'])->group(function() {
     Route::delete('/blogs/delete/{blog}', [BlogController::class, 'destroy'])->name('destroy');
 
     Route::get('/painel/client', [RegisterController::class, 'painelClient'])->name('admin.client.index');
+    Route::delete('/painel/delete/{id}', [RegisterController::class, 'destroy'])->name('admin.client.destroy');
 });
 
 Route::get('/loginadmin', [LoginadminController::class, 'index'])->name('loginadmin');
