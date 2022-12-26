@@ -120,6 +120,10 @@ class RegisterController extends Controller
     {
         //
         $data = $request->all();
+
+        
+
+        return redirect()->route('admin.user.index');
     }
 
     /**
