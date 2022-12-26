@@ -10,7 +10,7 @@
                         <div class="page-title-box">
                             <div class="page-title-right">
                                 <ol class="breadcrumb m-0">
-                                    <li class="breadcrumb-item"><a href="{{route('admin.dashboard')}}">Dashboard</a></li>
+                                    <li class="breadcrumb-item"><a href="{{route('painel')}}">Dashboard</a></li>
                                     <li class="breadcrumb-item"><a href="{{route('admin.user.index')}}">Usuários</a></li>
                                     <li class="breadcrumb-item active">Cadastro de Usuário</li>
                                 </ol>
@@ -21,7 +21,7 @@
                 </div>
                 <!-- end page title -->
                 {!! Form::model(null, ['route' => 'admin.user.store', 'class'=>'parsley-examples']) !!}
-                    @include('Admin.cruds.user.form')
+                    @include('Admin.cruds.client.form')
                     {!! Form::button('Cadastrar', ['class'=>'btn btn-primary waves-effect waves-light float-end me-3 width-lg', 'type' => 'submit']) !!}
                     <a href="{{route('admin.user.index')}}" class="btn btn-secondary waves-effect waves-light float-end me-3 width-lg">Voltar</a>
                 {!! Form::close() !!}

@@ -68,8 +68,13 @@ Route::middleware(['admin'])->group(function() {
     Route::put('/blogs/update/{blog}', [BlogController::class, 'update'])->name('admin.blog.update');
     Route::delete('/blogs/delete/{blog}', [BlogController::class, 'destroy'])->name('destroy');
 
-    Route::get('/painel/client', [RegisterController::class, 'painelClient'])->name('admin.client.index');
-    Route::delete('/painel/delete/{id}', [RegisterController::class, 'destroy'])->name('admin.client.destroy');
+    Route::get('/painel/client', [RegisterController::class, 'painelClient'])->name('admin.user.index');
+    Route::get('/painel/client/create', [RegisterController::class, 'create'])->name('admin.user.create');
+    Route::post('painel/client/store', [RegisterController::class, 'userstore'])->name('admin.user.store');
+    Route::get('painel/client/edit/{user}', [RegisterController::class, 'edit'])->name('admin.user.edit');
+    Route::put('/painel/client/update/{user}', [RegisterController::class, 'update'])->name('admin.user.update');
+    
+    Route::delete('/painel/client/delete/{user}', [RegisterController::class, 'destroy'])->name('admin.user.destroy');
 });
 
 Route::get('/loginadmin', [LoginadminController::class, 'index'])->name('loginadmin');

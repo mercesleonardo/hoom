@@ -40,11 +40,11 @@
                     @csrf
 
                     <label for="client">
-                        <input type="hidden" name="client" id="client" value="1">
+                        <input type="hidden" name="options" id="client" value="0">
                     </label>
-                    <label for="admin">
+                    {{-- <label for="admin">
                         <input type="hidden" name="admin" id="admin" value="0">
-                    </label>
+                    </label> --}}
                     <label for="name">
                         <input type="text" name="name" id="name" placeholder="Nome" value="{{ old('name') }}">
                     </label>

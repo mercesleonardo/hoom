@@ -14,6 +14,24 @@
                     'parsley-type'=>'email',
                 ]) !!}
             </div>
+            <div class="mb-3">
+                {!! Form::label(null, 'Contato', ['class'=>'form-label']) !!}
+                {!! Form::text('phone', null, [
+                    'class'=>'form-control',
+                    'data-toggle'=>'input-mask',
+                    'required'=>'required',
+                    'data-mask-format'=>'(00) 00000-0000',
+                ]) !!}
+            </div>
+            <div class="mb-3">
+                {!! Form::label('heard', 'Select', ['class'=>'form-label']) !!}
+                {!! Form::select('options', ['0' => 'Cliente', '1' => 'Administrador'], null, [
+                    'class'=>'form-select',
+                    'id'=>'heard',
+                    'required'=>'required',
+                    'placeholder' => 'Informe o nível de acesso...'
+                ]) !!}
+            </div>
 
         </div> <!-- end card-body-->
     </div> <!-- end card-->

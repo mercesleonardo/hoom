@@ -288,9 +288,9 @@
                             </li>
 
                             <li>
-                                <a nofollow href="#">
+                                <a nofollow href="{{route('admin.user.index')}}">
                                     <i class="mdi mdi-view-dashboard-outline"></i>
-                                    <span> Clientes </span>
+                                    <span> Usuários </span>
                                 </a>
                             </li>
                             <li>

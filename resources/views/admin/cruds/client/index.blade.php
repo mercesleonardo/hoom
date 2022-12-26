@@ -29,7 +29,7 @@
                                         {{-- <button id="btSubmitDelete" data-route="{{route('admin.client.destroySelected')}}" type="button" class="btn btn-danger" style="display: none;">Deletar selecionados</button> --}}
                                     </div>
                                     <div class="col-6">
-                                        {{-- <a href="{{route('admin.user.create')}}" class="btn btn-success float-end">Adicionar novo <i class="mdi mdi-plus"></i></a> --}}
+                                        <a href="{{route('admin.user.create')}}" class="btn btn-success float-end">Adicionar novo <i class="mdi mdi-plus"></i></a>
                                     </div>
                                 </div>
                                 <table data-toggle="table" data-page-size="5" data-pagination="false" class="table-bordered table-sortable">
@@ -41,6 +41,7 @@
                                             </th>
                                             <th>Nome</th>
                                             <th>E-mail</th>
+                                            <th>Contato</th>
                                             <th>Status</th>
                                             <th>Criado em</th>
                                             <th>Ações</th>
@@ -57,6 +58,7 @@
                                                 </td>
                                                 <td>{{$user->name}}</td>
                                                 <td>{{$user->email}}</td>
+                                                <td>{{$user->phone}}</td>
                                                 <td>
                                                     @switch($user->active)
                                                         @case(0) <span class="badge bg-danger">Inativo</span> @break
@@ -69,7 +71,7 @@
                                                         <div class="col-4">
                                                             <a href="{{route('admin.user.edit',['user' => $user->id])}}" class="btn-icon mdi mdi-square-edit-outline"></a>
                                                         </div>
-                                                        <form action="{{route('admin.client.destroy',['user' => $user->id])}}" class="col-4" method="POST">
+                                                        <form action="{{route('admin.user.destroy',['user' => $user->id])}}" class="col-4" method="POST">
                                                             @method('DELETE') @csrf
                                                             <button type="button" class="btn-icon btSubmitDeleteItem"><i class="mdi mdi-trash-can"></i></button>
                                                         </form>

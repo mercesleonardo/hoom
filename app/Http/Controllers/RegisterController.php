@@ -37,6 +37,7 @@ class RegisterController extends Controller
     public function create()
     {
         //
+        return view('admin.cruds.client.create');
     }
 
     /**
@@ -56,11 +57,31 @@ class RegisterController extends Controller
 
         ]);
 
-        $data = $request->only('name', 'email', 'phone', 'password', 'client', 'admin');
+        $data = $request->only('name', 'email', 'phone', 'password', 'options');
         $data['password'] = Hash::make($data['password']);
         User::create($data);
 
         return redirect()->route('login');
+    }
+
+    public function userstore(Request $request) {
+        $request->validate([
+            'name' =>'required',
+            'email' =>'required|email',
+            'phone' => 'min:11',
+            'password' =>'required|min:6|confirmed',
+
+        ]);
+
+        $data = $request->only('name', 'email', 'phone', 'password', 'client', 'admin');
+        $data['password'] = Hash::make($data['password']);
+
+        $data['options'] = $request->options?1:0;
+        $data['active'] = $request->active?1:0;
+
+        User::create($data);
+
+        return redirect()->route('admin.user.index');
     }
 
     /**
@@ -80,9 +101,12 @@ class RegisterController extends Controller
      * @param  \App\Models\Register  $register
      * @return \Illuminate\Http\Response
      */
-    public function edit(Register $register)
+    public function edit(User $user)
     {
         //
+        return view('admin.cruds.client.edit', [
+            'user'=>$user
+        ]);
     }
 
     /**
@@ -92,9 +116,10 @@ class RegisterController extends Controller
      * @param  \App\Models\Register  $register
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Register $register)
+    public function update(Request $request, User $user)
     {
         //
+        $data = $request->all();
     }
 
     /**

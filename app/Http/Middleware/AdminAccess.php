@@ -15,7 +15,7 @@ class AdminAccess
      * @return \Illuminate\Http\Response|\Illuminate\Http\RedirectResponse
      */
     public function handle(Request $request, Closure $next)
-    {   if(auth()->check() AND auth()->user()->admin) {
+    {   if(auth()->check() AND auth()->user()->options == 1) {
             return $next($request);
         }
         // dd('Acesso negado, você não é um administrador');
