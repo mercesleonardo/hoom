@@ -121,7 +121,16 @@ class RegisterController extends Controller
         //
         $data = $request->all();
 
-        
+        $data['active'] = $request->active?1:0;
+        $data['options'] = $request->options?1:0;
+
+        if($request->password) {
+            $data['password'] = Hash::make($request->password);
+        } else {
+            unset($data['password']);
+        }
+
+        $user->fill($data)->save();
 
         return redirect()->route('admin.user.index');
     }

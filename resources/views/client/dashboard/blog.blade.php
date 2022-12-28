@@ -22,7 +22,7 @@
             <div class="engloba-titulo-blog">
                 <div class="ld1-titulo-blog">
                     <h4 class="titulo-principal-blog">
-                        <a class="esq-blog" href="{{ route('blogs') }}">
+                        <a class="esq-blog" href="{{route('client.dashboard.blogs')}}">
                             <img class="img-esq-blog" src="images/esq.png" alt="">
                         </a>Blog
                     </h4>

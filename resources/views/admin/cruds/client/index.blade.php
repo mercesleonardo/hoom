@@ -43,6 +43,7 @@
                                             <th>E-mail</th>
                                             <th>Contato</th>
                                             <th>Status</th>
+                                            <th>Nível</th>
                                             <th>Criado em</th>
                                             <th>Ações</th>
                                         </tr>
@@ -65,6 +66,7 @@
                                                         @case(1) <span class="badge bg-success">Ativo</span> @break
                                                     @endswitch
                                                 </td>
+                                                <td>{{$user->options}}</td>
                                                 <td>{{Carbon\Carbon::parse($user->created_at)->format('d/m/Y H:i')}}</td>
                                                 <td>
                                                     <div class="row">

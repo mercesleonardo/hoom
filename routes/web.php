@@ -26,7 +26,8 @@ Route::middleware(['client'])->group(function() {
     Route::get('/project', [ProjectController::class, 'show'])->name('project');
 
     //Blogs routes
-
+    Route::get('client/blogs', [BlogController::class, 'indexblogs'])->name('client.dashboard.blogs');
+    Route::get('client/blog', [BlogController::class, 'showblog'])->name('client.dashboard.blog');
 
     //Approval routes
     Route::get('/approval', [ApprovalController::class, 'index'])->name('approval');
@@ -73,7 +74,7 @@ Route::middleware(['admin'])->group(function() {
     Route::post('painel/client/store', [RegisterController::class, 'userstore'])->name('admin.user.store');
     Route::get('painel/client/edit/{user}', [RegisterController::class, 'edit'])->name('admin.user.edit');
     Route::put('/painel/client/update/{user}', [RegisterController::class, 'update'])->name('admin.user.update');
-    
+
     Route::delete('/painel/client/delete/{user}', [RegisterController::class, 'destroy'])->name('admin.user.destroy');
 });
 
