@@ -21,13 +21,14 @@ class BlogController extends Controller
         return view('admin.cruds.blog.index', ['blogs' => $blogs]);
     }
 
-    public function indexblogs(Request $request) {
-        return view('client.dashboard.blogs');
+    public function indexblogs(Blog $blogs) {
+        $blogs = Blog::paginate('30');
+        return view('client.dashboard.blogs', ['blogs' => $blogs]);
     }
 
-    public function showblog(Blog $blogs) {
-        $blogs = Blog::paginate('3');
-        return view('client.dashboard.blog', ['blogs' => $blogs]);
+    public function showblog(Blog $blog) {
+
+        return view('client.dashboard.blog', ['blog' => $blog]);
     }
 
 

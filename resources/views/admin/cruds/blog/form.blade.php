@@ -44,7 +44,7 @@
                     'data-height' => '300',
                     'data-max-file-size-preview' => '2M',
                     'accept' => 'image/*',
-                    'data-default-file' => isset($test) ? ($test->path_image != '' ? url('storage/' . $test->path_image) : '') : '',
+                    'data-default-file' => isset($blog) ? ($blog->path_image != '' ? url('storage/' . $blog->path_image) : '') : '',
                 ]) !!}
             </div>
             <div class="mb-3">
@@ -54,7 +54,7 @@
                     'data-height' => '300',
                     'data-max-file-size-preview' => '2M',
                     'accept' => 'image/*',
-                    'data-default-file' => isset($test) ? ($test->path_image != '' ? url('storage/' . $test->path_image) : '') : '',
+                    'data-default-file' => isset($blog) ? ($blog->path_image_author != '' ? url('storage/' . $blog->path_image_author) : '') : '',
                 ]) !!}
             </div>
             <div class="mb-3 form-check">

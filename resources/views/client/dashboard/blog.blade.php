@@ -36,44 +36,26 @@
                 <div class="box-blog">
 
                     <div class="image-blog">
-                        <img src="images/blog.png" alt="">
+                        <img src="{{asset('storage/'.$blog->path_image)}}" alt="">
                     </div>
                     <div class="descricao-blog">
-                        <h2 class="titulo-blog">Marketing Digital</h2>
-                        <h4 class="subtitulo-blog">Como pesquisar palavras-chave
-                            No google ADS</h4>
+                        <h2 class="titulo-blog">{{$blog->title}}</h2>
+                        <h4 class="subtitulo-blog">{{$blog->description}}</h4>
                         <p class="texto-blog">
-                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
-                            Aenean massa. Cum sociis natoque penatibus et magnis dis tempus. Donec vitae sapien ut
-                            libero venenatis tempus. Donec vitae sapien ut libero venenatis parturient montes, nascetur
-                            ridiculus mus.
-
-                            Donec quam felis nte tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus.
-                            Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis Leo. Sed fringilla
-                            mauris
-
-                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
-                            Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
-                            ridiculus mus.
-
-                            Donec quam felis nte tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus.
-                            Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla
-                            mauris
-
-
+                            {!!$blog->text!!}
                         </p>
                         <div class="pessoa-blog">
                             <div class="perfil-blog">
-                                <img class="img-pessoa-blog" src="" alt="">
+                                <img class="img-pessoa-blog" src="{{asset('storage/'.$blog->path_image_author)}}" alt="">
                                 <div class="descricao-pessoa-blog">
-                                    <h4 class="titulo-pessoa-blog">Mateus Matos</h4>
-                                    <span class="minutos-blog">2 minutes ago</span>
+                                    <h4 class="titulo-pessoa-blog">{{$blog->author}}</h4>
+                                    <span class="minutos-blog">{{$blog->created_at}}</span>
                                 </div>
                             </div>
-                            <div class="curtidas-blog">
+                            {{-- <div class="curtidas-blog">
                                 <img class="coracao-blog" src="images/heart.png" alt="">
                                 <span class="numero-curtidas-blog">325</span>
-                            </div>
+                            </div> --}}
                         </div>
                     </div>
 

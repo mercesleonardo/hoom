@@ -33,35 +33,34 @@
             </div>
 
             <div class="conteudo-box-blogs">
-
-                <div class="box-blogs">
-                    <a href="{{route('client.dashboard.blog')}}">
-                        <div class="image-blogs">
-                            <img src="images/blog.png" alt="">
-                        </div>
-                        <div class="descricao-blogs">
-                            <h2 class="titulo-blogs">Marketing Digital</h2>
-                            <h4 class="subtitulo-blogs">Como pesquisar palavras-chave
-                                No google ADS</h4>
-                            <p></p>
-                            <div class="pessoa-blogs">
-                                <div class="perfil-blogs">
-                                    <img class="img-pessoa"-blogs src="" alt="">
-                                    <div class="descricao-pessoa-blogs">
-                                        <h4 class="titulo-pessoa-blogs">Mateus Matos</h4>
-                                        <span class="minutos-blogs">2 minutes ago</span>
+                @foreach ($blogs as $itens)
+                    <div class="box-blogs">
+                        <a href="{{ route('client.dashboard.blog', ['blog'=>$itens->id]) }}">
+                            <div class="image-blogs">
+                                <img src="{{asset('storage/'.$itens->path_image)}}" alt="">
+                            </div>
+                            <div class="descricao-blogs">
+                                <h2 class="titulo-blogs">{{$itens->title}}</h2>
+                                <h4 class="subtitulo-blogs">{{$itens->description}}</h4>
+                                <p></p>
+                                <div class="pessoa-blogs">
+                                    <div class="perfil-blogs">
+                                        <img class="img-pessoa-blogs" src="{{asset('storage/'.$itens->path_image_author)}}" alt="">
+                                        <div class="descricao-pessoa-blogs">
+                                            <h4 class="titulo-pessoa-blogs">{{$itens->author}}</h4>
+                                            <span class="minutos-blogs">{{$itens->created_at}}</span>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="curtidas-blogs">
-                                    <img class="coracao-blogs" src="images/heart.png" alt="">
-                                    <span class="numero-curtidas-blogs">325</span>
+                                    {{-- <div class="curtidas-blogs">
+                                        <img class="coracao-blogs" src="images/heart.png" alt="">
+                                        <span class="numero-curtidas-blogs">325</span>
+                                    </div> --}}
                                 </div>
                             </div>
-                        </div>
 
-                    </a>
-                </div>
-
+                        </a>
+                    </div>
+                @endforeach
             </div>
             <a class="mais-blogs" href="">
                 +
