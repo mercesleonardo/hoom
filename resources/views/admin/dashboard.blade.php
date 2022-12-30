@@ -72,7 +72,7 @@
                     </div> <!-- end col-->
 
                     <div class="col-md-6 col-xl-3">
-                        <a nofollow href="{{route('admin.blog.index')}}">
+                        <a nofollow href="{{route('admin.projects.index')}}">
                             <div class="widget-rounded-circle card">
                                 <div class="card-body">
                                     <div class="row">
@@ -92,9 +92,9 @@
                             </div> <!-- end widget-rounded-circle-->
                         </a>
                     </div> <!-- end col-->
-                    
+
                 </div>
-    
+
 
             </div> <!-- container -->
 

@@ -26,10 +26,10 @@
                             <div class="card-body">
                                 <div class="row mb-3">
                                     <div class="col-6">
-                                        <button id="btSubmitDelete" data-route="{{route('admin.user.destroySelected')}}" type="button" class="btn btn-danger" style="display: none;">Deletar selecionados</button>
+                                        <button id="btSubmitDelete" data-route="" type="button" class="btn btn-danger" style="display: none;">Deletar selecionados</button>
                                     </div>
                                     <div class="col-6">
-                                        <a href="{{route('admin.user.create')}}" class="btn btn-success float-end">Adicionar novo <i class="mdi mdi-plus"></i></a>
+                                        <a href="" class="btn btn-success float-end">Adicionar novo <i class="mdi mdi-plus"></i></a>
                                     </div>
                                 </div>
                                 <table data-toggle="table" data-page-size="5" data-pagination="false" class="table-bordered table-sortable">
@@ -47,7 +47,7 @@
                                         </tr>
                                     </thead>
 
-                                    <tbody data-route="{{route('admin.user.sorting')}}">
+                                    {{-- <tbody data-route="">
                                         @foreach ($users as $key => $user)
                                             <tr>
                                                 <td><span class="btnDrag mdi mdi-drag-horizontal font-22"></span></td>
@@ -75,13 +75,13 @@
                                                     </div>
                                                 </td>
                                             </tr>
-                                        @endforeach
+                                        @endforeach --}}
                                     </tbody>
                                 </table>
 
                                 {{-- PAGINATION --}}
                                 <div class="mt-3 float-end">
-                                    {{$users->links()}}
+                                    {{-- {{$users->links()}} --}}
                                 </div>
                             </div>
                         </div> <!-- end card-->
