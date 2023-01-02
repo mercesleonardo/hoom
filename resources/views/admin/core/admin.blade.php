@@ -299,6 +299,12 @@
                                     <span> Blogs </span>
                                 </a>
                             </li>
+                            <li>
+                                <a nofollow href="{{route('admin.projects.index')}}">
+                                    <i class="mdi mdi-view-dashboard-outline"></i>
+                                    <span> Projetos </span>
+                                </a>
+                            </li>
                         </ul>
 
                     </div>

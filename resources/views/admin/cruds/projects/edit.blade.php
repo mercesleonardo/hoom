@@ -10,20 +10,20 @@
                         <div class="page-title-box">
                             <div class="page-title-right">
                                 <ol class="breadcrumb m-0">
-                                    <li class="breadcrumb-item"><a href="{{route('admin.dashboard')}}">Dashboard</a></li>
-                                    <li class="breadcrumb-item"><a href="{{route('admin.user.index')}}">Usuários</a></li>
-                                    <li class="breadcrumb-item active">Editar Usuário</li>
+                                    <li class="breadcrumb-item"><a href="{{route('painel')}}">Dashboard</a></li>
+                                    <li class="breadcrumb-item"><a href="{{route('admin.projects.index')}}">Projetos</a></li>
+                                    <li class="breadcrumb-item active">Editar projeto</li>
                                 </ol>
                             </div>
-                            <h4 class="page-title">Editar Usuário</h4>
+                            <h4 class="page-title">Editar projeto</h4>
                         </div>
                     </div>
                 </div>
                 <!-- end page title -->
-                {!! Form::model($user, ['route' => ['admin.user.update', $user->id], 'class'=>'parsley-examples', 'method' => 'PUT']) !!}
-                    @include('Admin.cruds.user.form')
+                {!! Form::model($project, ['route' => ['admin.projects.update', $project->id], 'class'=>'parsley-examples', 'method' => 'PUT']) !!}
+                    @include('Admin.cruds.projects.form')
                     {!! Form::button('Salvar', ['class'=>'btn btn-primary waves-effect waves-light float-end me-3 width-lg', 'type' => 'submit']) !!}
-                    <a href="{{route('admin.user.index')}}" class="btn btn-secondary waves-effect waves-light float-end me-3 width-lg">Voltar</a>
+                    <a href="{{route('admin.projects.index')}}" class="btn btn-secondary waves-effect waves-light float-end me-3 width-lg">Voltar</a>
                 {!! Form::close() !!}
             </div> <!-- container -->
         </div> <!-- content -->

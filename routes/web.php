@@ -77,6 +77,11 @@ Route::middleware(['admin'])->group(function() {
     Route::delete('/painel/client/delete/{user}', [RegisterController::class, 'destroy'])->name('admin.user.destroy');
 
     Route::get('/admin/projects', [ProjectController::class, 'indexpainel'])->name('admin.projects.index');
+    Route::get('/admin/projects/create', [ProjectController::class, 'create'])->name('admin.projects.create');
+    Route::post('/admin/projects/store', [ProjectController::class, 'store'])->name('admin.projects.store');
+    Route::get('/admin/projects/edit/{project}', [ProjectController::class, 'edit'])->name('admin.projects.edit');
+    Route::put('/admin/projects/update/{project}', [ProjectController::class, 'update'])->name('admin.projects.update');
+    Route::delete('/admin/projects/delete/{project}', [ProjectController::class, 'destroy'])->name('admin.projects.destroy');
 });
 
 Route::get('/loginadmin', [LoginadminController::class, 'index'])->name('loginadmin');

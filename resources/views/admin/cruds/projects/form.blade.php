@@ -1,17 +1,29 @@
-
 <div class="row col-12">
     <div class="col-12 col-lg-6">
         <div class="card card-body">
             <div class="mb-3">
-                {!! Form::label(null, 'Nome', ['class'=>'form-label']) !!}
-                {!! Form::text('name', null, ['class'=>'form-control', 'id'=>'validationCustom01', 'required'=>'required']) !!}
+                {!! Form::label('heard', 'Cliente', ['class' => 'form-label']) !!}
+                {!! Form::select('user_id', $users, null, [
+                    'class' => 'form-select',
+                    'id' => 'heard',
+                    'required' => 'required',
+                    'placeholder' => 'Selecionar cliente...',
+                ]) !!}
             </div>
             <div class="mb-3">
-                {!! Form::label(null, 'E-mail', ['class'=>'form-label']) !!}
-                {!! Form::email('email', null, [
-                    'class'=>'form-control',
-                    'required'=>'required',
-                    'parsley-type'=>'email',
+                {!! Form::label(null, 'Nome do projeto', ['class' => 'form-label']) !!}
+                {!! Form::text('name', null, [
+                    'class' => 'form-control',
+                    'id' => 'validationCustom01',
+                    'required' => 'required',
+                ]) !!}
+            </div>
+            <div class="mb-3">
+                {!! Form::label(null, 'URL', ['class' => 'form-label']) !!}
+                {!! Form::url('link', null, [
+                    'class' => 'form-control',
+                    'required' => 'required',
+                    'parsley-type' => 'url',
                 ]) !!}
             </div>
 
@@ -19,21 +31,30 @@
     </div> <!-- end card-->
     <div class="col-12 col-lg-6">
         <div class="card card-body">
+
             <div class="mb-3">
-                {!! Form::label(null, 'Senha', ['class'=>'form-label']) !!}
-                {!! Form::password('password', [
-                        'class'=>'form-control',
-                        'id'=>'pass2',
-                    ])!!}
-                {!! Form::password('password_confirmation', [
-                        'class'=>'form-control mt-3',
-                        'data-parsley-equalto'=>"#pass2",
-                        'placeholder'=>'Confirmar senha',
-                    ])!!}
-            </div>
-            <div class="mb-3 form-check">
-                {!! Form::checkbox('active', '1', null, ['class'=>'form-check-input', 'id'=>'active', 'required'=>'required']) !!}
-                {!! Form::label('active', 'Ativar usuário?', ['class'=>'form-check-label']) !!}
+                {!! Form::label('heard', 'Status', ['class' => 'form-label']) !!}
+                {!! Form::select(
+                    'status',
+                    [
+                        '1' => 'A fazer',
+                        '2' => 'Em produção',
+                        '3' => 'Aguardando',
+                        '4' => 'Stand by',
+                        '5' => 'Travado',
+                        '6' => 'Parado',
+                        '7' => 'Em aprovação',
+                        '8' => 'Ajustes',
+                        '9' => 'Concluído',
+                    ],
+                    null,
+                    [
+                        'class' => 'form-select',
+                        'id' => 'heard',
+                        'required' => 'required',
+                        'placeholder' => 'Selecionar status do projeto...',
+                    ],
+                ) !!}
             </div>
         </div> <!-- end card-body-->
     </div> <!-- end card-->
