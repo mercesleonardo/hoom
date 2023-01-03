@@ -13,17 +13,21 @@ use App\Http\Controllers\Helpers\HelperArchive;
 class ProjectController extends Controller
 {
     //
-    public function index(Request $request){
-        return view('client.dashboard.projects');
+    public function index(){
+
+        Auth::user()->id;
+        $projects = Project::where('user_id', Auth::user()->id)->get();
+        return view('client.dashboard.projects', ['projects' => $projects]);
     }
 
     public function show() {
+
         return view('client.dashboard.project');
     }
 
     public function indexpainel(Project $projects) {
         $projects = Project::with('user')->paginate('20');
-        
+
         return view('admin.cruds.projects.index', ['projects' => $projects]);
     }
 
@@ -43,7 +47,7 @@ class ProjectController extends Controller
     }
 
     public function edit(Project $project)
-    {   
+    {
         $users = User::where('options',0)->pluck('name','id');
 
         return view('admin.cruds.projects.edit', ['users' => $users,
@@ -62,7 +66,7 @@ class ProjectController extends Controller
 
     public function destroy(Project $project)
     {
-        
+
         $project->delete();
 
         return redirect()->back();

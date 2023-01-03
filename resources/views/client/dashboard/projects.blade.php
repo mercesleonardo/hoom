@@ -5,7 +5,7 @@
         <div class="topo-lateral-projects">
             <div class="logo-hoom-projects">
 
-                    <img src="images/logo.png" alt="">
+                <img src="images/logo.png" alt="">
 
             </div>
             <div class="rede-lateral-projects">
@@ -30,61 +30,68 @@
                     </h4>
                 </div>
                 <div class="ld2-titulo-projects">
-                        <img src="images/icone-home.png" alt="">
+                    <img src="images/icone-home.png" alt="">
                 </div>
             </div>
             <div class="conteudo-box-projetos">
-                <div class="box-projetos">
-                    <div class="ld1-projetos">
-                        <h4 class="titulo-projects"><img src="images/icone-projeto.png" alt="">Desenvolvimento de site
-                            Dinâmico
-                        </h4>
-                        <span class="separador-projects"></span>
-                        <div class="btn-projetos">
-                            <a href="{{ route('project') }}">Ver projeto</a>
+                @foreach ($projects as $itens)
+                    <div class="box-projetos">
+                        <div class="ld1-projetos">
+                            <h4 class="titulo-projects"><img src="images/icone-projeto.png"
+                                    alt="">{{ $itens->name }}
+                            </h4>
+                            <span class="separador-projects"></span>
+                            <div class="btn-projetos">
+                                <a href="{{ route('project') }}">Ver projeto</a>
+                            </div>
+                        </div>
+                        <div class="ld2-projetos">
+                            <div class="btn-status-projects">
+                                <img src="images/icone-status1.png" alt="">
+                                <h4 class="titulo-projects">
+                                    @switch($itens->status)
+                                        @case(1)
+                                            <span>A fazer</span>
+                                        @break
+
+                                        @case(2)
+                                            <span>Em produção</span>
+                                        @break
+
+                                        @case(3)
+                                            <span>Aguardando</span>
+                                        @break
+
+                                        @case(4)
+                                            <span>Stand by</span>
+                                        @break
+
+                                        @case(5)
+                                            <span>Travado</span>
+                                        @break
+
+                                        @case(6)
+                                            <span>Parado</span>
+                                        @break
+
+                                        @case(7)
+                                            <span>Em aprovação</span>
+                                        @break
+
+                                        @case(8)
+                                            <span>Ajustes</span>
+                                        @break
+
+                                        @case(9)
+                                            <span>Concluído</span>
+                                        @break
+                                    @endswitch
+                                </h4>
+                            </div>
                         </div>
                     </div>
-                    <div class="ld2-projetos">
-                        <div class="btn-status-projects">
-                            <img src="images/icone-status1.png" alt="">
-                            <h4 class="titulo-projects">Em Produção</h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="box-projetos">
-                    <div class="ld1-projetos">
-                        <h4 class="titulo-projects"><img src="images/icone-projeto.png" alt="">Desenvolvimento de site
-                            Dinâmico
-                        </h4>
-                        <span class="separador-projects"></span>
-                        <div class="btn-projetos">
-                            <a href="{{ route('project') }}">Ver projeto</a>
-                        </div>
-                    </div>
-                    <div class="ld2-projetos">
-                        <div class="btn-status-projects">
-                            <img src="images/icone-status2.png" alt="">
-                            <h4 class="titulo-projects">Em Produção</h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="box-projetos">
-                    <div class="ld1-projetos">
-                        <h4 class="titulo-projects">
-                            <img src="images/icone-projeto.png" alt="">Desenvolvimento de site Dinâmico
-                        </h4>
-                        <span class="separador-projects"></span>
-                        <div class="btn-projetos">
-                            <a href="{{ route('project') }}">Projeto Parado</a>
-                        </div>
-                    </div>
-                    <div class="ld2-projetos">
-                        <div class="btn-status-projects">
-                            <img src="images/icone-status3.png" alt="">
-                            <h4 class="titulo-projects">Concluído</h4>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
+
             </div>
             <a class="mais-projects" href="">
                 +

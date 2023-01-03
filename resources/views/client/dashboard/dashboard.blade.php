@@ -23,6 +23,7 @@
                 <div class="ld1-titulo-dashboard">
                     <h4 class="titulo-dashboard">Olá, {{ $names }}</h4>
                     <p>{{ strftime('%A, %d de %B de %Y', strtotime('today')) }}</p>
+                    
                 </div>
                 <div class="ld2-titulo-dashboard">
                     <a href="{{route('logout')}}" class="logout-button">
