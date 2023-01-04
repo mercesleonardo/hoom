@@ -42,7 +42,7 @@
                             </h4>
                             <span class="separador-projects"></span>
                             <div class="btn-projetos">
-                                <a href="{{ route('project') }}">Ver projeto</a>
+                                <a href="{{ route('project', ['project'=>$itens->id]) }}">Ver projeto</a>
                             </div>
                         </div>
                         <div class="ld2-projetos">

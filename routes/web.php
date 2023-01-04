@@ -7,10 +7,8 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\BlogController;
-use App\Http\Controllers\ApprovalController;
-use App\Http\Controllers\SolicitationController;
-use App\Http\Controllers\AttendanceController;
-use App\Http\Controllers\FileController;
+use App\Http\Controllers\LinkController;
+
 use App\Http\Controllers\PainelController;
 use App\Http\Controllers\LoginadminController;
 
@@ -23,23 +21,13 @@ Route::middleware(['client'])->group(function() {
 
     //Projects routes
     Route::get('/projects', [ProjectController::class, 'index'])->name('projects');
-    Route::get('/project', [ProjectController::class, 'show'])->name('project');
+    Route::get('/project/{project}', [ProjectController::class, 'show'])->name('project');
 
     //Blogs routes
     Route::get('client/blogs', [BlogController::class, 'indexblogs'])->name('client.dashboard.blogs');
     Route::get('client/blog/{blog}', [BlogController::class, 'showblog'])->name('client.dashboard.blog');
 
-    //Approval routes
-    Route::get('/approval', [ApprovalController::class, 'index'])->name('approval');
-
-    //Solicitation routes
-    Route::get('/solicitation', [SolicitationController::class, 'index'])->name('solicitation');
-
-    //Attendance routes
-    Route::get('/attendance', [AttendanceController::class, 'index'])->name('attendance');
-
-    //Files routes
-    Route::get('/files', [FileController::class, 'index'])->name('files');
+    
 
 });
 
@@ -82,6 +70,13 @@ Route::middleware(['admin'])->group(function() {
     Route::get('/admin/projects/edit/{project}', [ProjectController::class, 'edit'])->name('admin.projects.edit');
     Route::put('/admin/projects/update/{project}', [ProjectController::class, 'update'])->name('admin.projects.update');
     Route::delete('/admin/projects/delete/{project}', [ProjectController::class, 'destroy'])->name('admin.projects.destroy');
+
+    Route::get('/admin/links', [LinkController::class, 'index'])->name('admin.links.index');
+    Route::get('/admin/links/create', [LinkController::class, 'create'])->name('admin.links.create');
+    Route::post('/admin/links/store', [LinkController::class, 'store'])->name('admin.links.store');
+    Route::get('/admin/links/edit/{link}', [LinkController::class, 'edit'])->name('admin.links.edit');
+    Route::put('/admin/links/update/{link}',[LinkController::class, 'update'])->name('admin.links.update');
+    Route::delete('/admin/links/delete/{link}', [LinkController::class, 'destroy'])->name('admin.links.destroy');
 });
 
 Route::get('/loginadmin', [LoginadminController::class, 'index'])->name('loginadmin');

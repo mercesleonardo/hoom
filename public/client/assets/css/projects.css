@@ -60,7 +60,11 @@
     display: flex;
     flex-wrap: wrap;
     gap: 26px 0;
+    flex-direction: column;
+    width: 100%;
 }
+
+.conteudo-box-projetos {}
 .conteudo-projetos {
     width: 84%;
     margin-right: auto;

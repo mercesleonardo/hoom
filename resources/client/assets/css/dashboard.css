@@ -141,10 +141,13 @@
     display: flex;
     flex-wrap: wrap;
     gap: 25px;
+    width: 100%;
 }
 
 .box-dashboard {
-    width: 209px;
+    width: 18.5%;
+    max-width: 248.63px;
+    /* flex: 1; */
     height: 171px;
     border: 1px solid #5CFFC4;
     display: flex;

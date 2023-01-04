@@ -48,23 +48,11 @@ class User extends Authenticatable
         return $this->hasMany('App\Models\Project');
     }
 
-    public function approvals() {
-        return $this->hasMany('App\Models\Approval');
-    }
-
-    public function attendances() {
-        return $this->hasMany('App\Models\Attendance');
-    }
-
     public function blogs() {
         return $this->hasMany('App\Models\Blog');
     }
 
-    public function files() {
-        return $this->hasMany('App\Models\File');
-    }
-
-    public function solicitations() {
-        return $this->hasMany('App\Models\Solicitation');
+    public function links() {
+        return $this->hasMany('App\Models\Link');
     }
 }

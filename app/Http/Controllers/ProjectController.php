@@ -14,15 +14,14 @@ class ProjectController extends Controller
 {
     //
     public function index(){
-
-        Auth::user()->id;
+        
         $projects = Project::where('user_id', Auth::user()->id)->get();
         return view('client.dashboard.projects', ['projects' => $projects]);
     }
 
-    public function show() {
-
-        return view('client.dashboard.project');
+    public function show(Project $project) {
+        // dd($project);
+        return view('client.dashboard.project', ['project' => $project]);
     }
 
     public function indexpainel(Project $projects) {
