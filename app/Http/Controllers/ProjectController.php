@@ -14,20 +14,20 @@ class ProjectController extends Controller
 {
     //
     public function index(){
-        
+
         $projects = Project::where('user_id', Auth::user()->id)->get();
         return view('client.dashboard.projects', ['projects' => $projects]);
-    }
-
-    public function show(Project $project) {
-        // dd($project);
-        return view('client.dashboard.project', ['project' => $project]);
     }
 
     public function indexpainel(Project $projects) {
         $projects = Project::with('user')->paginate('20');
 
         return view('admin.cruds.projects.index', ['projects' => $projects]);
+    }
+
+    public function show(Project $project) {
+        // dd($project);
+        return view('client.dashboard.project', ['project' => $project]);
     }
 
     public function create() {

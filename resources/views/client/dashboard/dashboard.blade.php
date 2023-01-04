@@ -23,7 +23,7 @@
                 <div class="ld1-titulo-dashboard">
                     <h4 class="titulo-dashboard">Olá, {{ $names }}</h4>
                     <p>{{ strftime('%A, %d de %B de %Y', strtotime('today')) }}</p>
-                    
+
                 </div>
                 <div class="ld2-titulo-dashboard">
                     <a href="{{route('logout')}}" class="logout-button">
@@ -40,25 +40,25 @@
                     </a>
                 </div>
                 <div class="box-dashboard">
-                    <a href="{{route('approval')}}">
+                    <a href="{{route('client.dashboard.approval')}}">
                         <img src="images/icone-dashboard2.png" alt="">
                         <h4 class="titulo-dashboard">Aprovações</h4>
                     </a>
                 </div>
                 <div class="box-dashboard">
-                    <a href="{{route('solicitation')}}">
+                    <a href="">
                         <img src="images/icone-dashboard3.png" alt="">
                         <h4 class="titulo-dashboard">Solicitação</h4>
                     </a>
                 </div>
                 <div class="box-dashboard">
-                    <a href="{{route('attendance')}}">
+                    <a href="">
                         <img src="images/icone-dashboard4.png" alt="">
                         <h4 class="titulo-dashboard">Atendimento</h4>
                     </a>
                 </div>
                 <div class="box-dashboard">
-                    <a href="{{route('files')}}">
+                    <a href="">
                         <img src="images/icone-dashboard5.png" alt="">
                         <h4 class="titulo-dashboard">Enviar Arquivos</h4>
                     </a>

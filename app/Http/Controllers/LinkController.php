@@ -25,6 +25,11 @@ class LinkController extends Controller
         return view('admin.cruds.links.index', ['links' => $links]);
     }
 
+    public function indexApproval(Link $link) {
+        return view('client.dashboard.approval', ['link' => $link]);
+    }
+
+
     /**
      * Show the form for creating a new resource.
      *

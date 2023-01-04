@@ -24,10 +24,12 @@ Route::middleware(['client'])->group(function() {
     Route::get('/project/{project}', [ProjectController::class, 'show'])->name('project');
 
     //Blogs routes
-    Route::get('client/blogs', [BlogController::class, 'indexblogs'])->name('client.dashboard.blogs');
+    Route::get('/client/blogs', [BlogController::class, 'indexblogs'])->name('client.dashboard.blogs');
     Route::get('client/blog/{blog}', [BlogController::class, 'showblog'])->name('client.dashboard.blog');
 
-    
+    Route::get('/client/approval', [LinkController::class, 'indexApproval'])->name('client.dashboard.approval');
+
+
 
 });
 
