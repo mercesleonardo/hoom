@@ -57,8 +57,8 @@
                                                 <td>{{$link->user->name}}</td>
                                                 <td>{{$link->name}}</td>
                                                 <td>{{$link->link}}</td>
-                                            
-                                                
+
+
                                                 <td>{{Carbon\Carbon::parse($link->created_at)->format('d/m/Y H:i')}}</td>
                                                 <td>
                                                     <div class="row">

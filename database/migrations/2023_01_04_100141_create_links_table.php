@@ -18,6 +18,7 @@ class CreateLinksTable extends Migration
             $table->foreignId('user_id')->nullable()->constrained('users');
             $table->string('name');
             $table->string('link');
+            $table->string('path_image')->nullable();
             $table->timestamps();
         });
     }

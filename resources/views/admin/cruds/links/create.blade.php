@@ -20,7 +20,7 @@
                     </div>
                 </div>
                 <!-- end page title -->
-                {!! Form::model(null, ['route' => 'admin.links.store', 'class'=>'parsley-examples']) !!}
+                {!! Form::model(null, ['route' => 'admin.links.store', 'class'=>'parsley-examples', 'files'=>true]) !!}
                     @include('Admin.cruds.links.form')
                     {!! Form::button('Cadastrar', ['class'=>'btn btn-primary waves-effect waves-light float-end me-3 width-lg', 'type' => 'submit']) !!}
                     <a href="{{route('admin.links.index')}}" class="btn btn-secondary waves-effect waves-light float-end me-3 width-lg">Voltar</a>

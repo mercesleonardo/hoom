@@ -12,6 +12,7 @@ use App\Http\Controllers\Helpers\HelperArchive;
 
 class LinkController extends Controller
 {
+    protected $pathUpload = 'admin/uploads/images/link';
     /**
      * Display a listing of the resource.
      *
@@ -25,8 +26,8 @@ class LinkController extends Controller
         return view('admin.cruds.links.index', ['links' => $links]);
     }
 
-    public function indexApproval(Link $link) {
-        return view('client.dashboard.approval', ['link' => $link]);
+    public function show(Link $link) {
+        return view('client.dashboard.links', ['link' => $link]);
     }
 
 
@@ -54,7 +55,14 @@ class LinkController extends Controller
         //
         $data = $request->all();
 
+        $helper = new HelperArchive();
+        $path_image = $helper->optimizeImage($request, 'path_image', $this->pathUpload, null, 100);
+
+        if ($path_image) $data['path_image'] = $path_image;
+
         Link::create($data);
+
+        if($path_image) $request->file('path_image')->storeAs($this->pathUpload, $path_image);
 
         return redirect()->route('admin.links.index');
     }
@@ -65,10 +73,7 @@ class LinkController extends Controller
      * @param  \App\Models\Link  $link
      * @return \Illuminate\Http\Response
      */
-    public function show(Link $link)
-    {
-        //
-    }
+
 
     /**
      * Show the form for editing the specified resource.
@@ -98,7 +103,21 @@ class LinkController extends Controller
         //
         $data = $request->all();
 
+        $helper = new HelperArchive();
+        $path_image = $helper->optimizeImage($request, 'path_image', $this->pathUpload, null, 100);
+
+        if ($path_image) $data['path_image'] = $path_image;
+
+        if(isset($request->delete_path_image) && !$path_image){
+            $inputFile = $request->delete_path_image;
+            Storage::delete($benefitSection->$inputFile);
+            $data['path_image'] = null;
+        }
+
+
         $link->fill($data)->save();
+
+        if($path_image) $request->file('path_image')->storeAs($this->pathUpload, $path_image);
 
         return redirect()->route('admin.links.index');
     }
@@ -112,6 +131,7 @@ class LinkController extends Controller
     public function destroy(Link $link)
     {
         //
+        Storage::delete($this->pathUpload.$link->path_image);
         $link->delete();
 
         return redirect()->back();

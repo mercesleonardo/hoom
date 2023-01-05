@@ -40,7 +40,7 @@
                                         <div class="col-12">
                                             <div class="text-center">
                                                 <h4 class="text-dark mt-1">Usuários</h4>
-                                                <p class="text-muted mb-1">Ver mais</p>
+                                                <p class="text-muted mb-1">Acessar</p>
                                             </div>
                                         </div>
                                     </div> <!-- end row-->

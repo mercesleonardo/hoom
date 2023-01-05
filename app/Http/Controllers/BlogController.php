@@ -55,12 +55,11 @@ class BlogController extends Controller
         $data = $request->all();
 
         $helper = new HelperArchive();
-        $path_image = $helper->optimizeImage($request, 'path_image', $this->pathUpload, null, 100);
 
+        $path_image = $helper->optimizeImage($request, 'path_image', $this->pathUpload, null, 100);
         if ($path_image) $data['path_image'] = $path_image;
 
         $path_image_author = $helper->optimizeImage($request, 'path_image_author', $this->pathUpload, null, 100);
-
         if ($path_image_author) $data['path_image_author'] = $path_image_author;
 
 

@@ -39,30 +39,18 @@
                         <h4 class="titulo-dashboard">Meus Projetos</h4>
                     </a>
                 </div>
+                @foreach ( $links as $link)
+
+
                 <div class="box-dashboard">
-                    <a href="{{route('client.dashboard.approval')}}">
-                        <img src="images/icone-dashboard2.png" alt="">
-                        <h4 class="titulo-dashboard">Aprovações</h4>
+                    <a href="{{route('client.link.show', ['link'=>$link->id])}}">
+                        <img src="{{asset('storage/'.$link->path_image)}}" alt="">
+                        <h4 class="titulo-dashboard">{{$link->name}}</h4>
                     </a>
                 </div>
-                <div class="box-dashboard">
-                    <a href="">
-                        <img src="images/icone-dashboard3.png" alt="">
-                        <h4 class="titulo-dashboard">Solicitação</h4>
-                    </a>
-                </div>
-                <div class="box-dashboard">
-                    <a href="">
-                        <img src="images/icone-dashboard4.png" alt="">
-                        <h4 class="titulo-dashboard">Atendimento</h4>
-                    </a>
-                </div>
-                <div class="box-dashboard">
-                    <a href="">
-                        <img src="images/icone-dashboard5.png" alt="">
-                        <h4 class="titulo-dashboard">Enviar Arquivos</h4>
-                    </a>
-                </div>
+
+                @endforeach
+
                 <div class="box-dashboard">
                     <a href="{{route('client.dashboard.blogs')}}">
                         <img src="images/icone-dashboard6.png" alt="">

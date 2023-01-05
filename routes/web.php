@@ -27,7 +27,7 @@ Route::middleware(['client'])->group(function() {
     Route::get('/client/blogs', [BlogController::class, 'indexblogs'])->name('client.dashboard.blogs');
     Route::get('client/blog/{blog}', [BlogController::class, 'showblog'])->name('client.dashboard.blog');
 
-    Route::get('/client/approval', [LinkController::class, 'indexApproval'])->name('client.dashboard.approval');
+    Route::get('/client/link/{link}', [LinkController::class, 'show'])->name('client.link.show');
 
 
 
