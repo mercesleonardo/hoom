@@ -25,14 +25,20 @@ class LoginadminController extends Controller
 
     public function login_action(Request $request) {
 
-        $validator = $request->validate([
-            'email' =>'required|email',
-            'password' =>'required|min:6'
-        ]);
+        $this->validate($request,[
+            'email' =>'required',
+            'password' =>'required'
+        ],[
+            'email.required' =>'E-mail é obrigatório',
+            'password.required' =>'Senha é obrigatório',
+        ]
+        );
 
-        if (Auth::attempt($validator)) {
+        if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
 
             return redirect()->route('painel');
-        };
+        } else {
+            return redirect()->back()->with('danger', 'E-mail ou senha inválida');
+        }
     }
 }

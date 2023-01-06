@@ -85,6 +85,9 @@ mix
     .styles('node_modules/jquery-toast-plugin/dist/jquery.toast.min.css', 'public/admin/assets/libs/jquery.toast.min.css')
     .styles('node_modules/cropper/dist/cropper.min.css', 'public/admin/assets/libs/cropper.min.css')
 
+    //PADRAo
+    .scripts('resources/client/assets/js/main.js', 'public/client/assets/js/main.js')
+
     //CONFIG
     .autoload({
         'jquery': ['$', 'window.jQuery', 'jQuery']

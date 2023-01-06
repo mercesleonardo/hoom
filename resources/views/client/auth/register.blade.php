@@ -26,7 +26,7 @@
             </div>
             <div class="acessar-register">
 
-                <section id="task_section">
+                {{-- <section id="task_section">
                     @if ($errors->any())
                         <ul class="alert alert-error">
                             @foreach ($errors->all() as $error)
@@ -34,7 +34,7 @@
                             @endforeach
                         </ul>
                     @endif
-                </section>
+                </section> --}}
 
                 <form action="{{ route('register.store') }}" method="POST">
                     @csrf
@@ -46,22 +46,39 @@
                         <input type="hidden" name="admin" id="admin" value="0">
                     </label> --}}
                     <label for="name">
-                        <input type="text" name="name" id="name" placeholder="Nome" value="{{ old('name') }}">
+                        <input type="text" name="name" id="name" placeholder="Nome Completo"
+                            value="{{ old('name') }}" class="@error('name') is-invalid @enderror">
+                        @error('name')
+                            <div class="alert alert-danger">{{ $message }}</div>
+                        @enderror
                     </label>
                     <label for="phone">
-                        <input type="text" name="phone" id="phone" placeholder="Telefone"
-                            value="{{ old('phone') }}">
+                        <input type="text" name="phone" id="phone" placeholder="(XX) XXXXX-XXXX"
+                            value="{{ old('phone') }}" maxlength="15" onkeyup="handlePhone(event)" class="@error('phone') is-invalid @enderror">
+                        @error('phone')
+                            <div class="alert alert-danger">{{ $message }}</div>
+                        @enderror
                     </label>
                     <label for="email">
-                        <input type="email" name="email" id="email" placeholder="E-mail"
-                            value="{{ old('email') }}">
+                        <input type="email" name="email" id="email" placeholder="E-mail"value="{{ old('email') }}"
+                            class="@error('email') is-invalid @enderror">
+                        @error('email')
+                            <div class="alert alert-danger">{{ $message }}</div>
+                        @enderror
                     </label>
                     <label for="password">
-                        <input type="password" name="password" id="password" placeholder="Crie sua Senha">
+                        <input type="password" name="password" id="password" placeholder="Crie sua Senha"
+                            class="@error('password') is-invalid @enderror">
+                        @error('password')
+                            <div class="alert alert-danger">{{ $message }}</div>
+                        @enderror
                     </label>
                     <label for="password_confirmation">
                         <input type="password" name="password_confirmation" id="password_confirmation"
-                            placeholder="Confirme sua Senha">
+                            placeholder="Confirme sua Senha" class="@error('password') is-invalid @enderror">
+                        @error('password')
+                            <div class="alert alert-danger">{{ $message }}</div>
+                        @enderror
                     </label>
 
                     <button type="submit" class="btn-acessar-register">Cadastrar</button>

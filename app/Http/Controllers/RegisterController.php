@@ -52,9 +52,18 @@ class RegisterController extends Controller
         $request->validate([
             'name' =>'required',
             'email' =>'required|email',
-            'phone' => 'min:11',
+            'phone' => 'min:15',
             'password' =>'required|min:6|confirmed',
+            
 
+        ],[ 
+            'name.required' =>'Nome é obrigatório',
+            'phone.min' =>'Informe um número válido',
+            'email.required' =>'Email é obrigatório',
+            'email.email' =>'Informe um e-mail válido',
+            'password.required' =>'Senha é obrigatório',
+            'password.min' =>'A senha precisa ter 6 caracteres mínimos',
+            'password.confirmed' =>'Confirme sua senha',
         ]);
 
         $data = $request->only('name', 'email', 'phone', 'password', 'options');

@@ -36,6 +36,12 @@
                             @endforeach
                         </ul>
                     @endif
+
+                    @if (session('danger'))
+                        <ul class="alert alert-error">
+                            <li>{{session('danger')}}</li>
+                        </ul>
+                    @endif
                 </section>
 
                 <form action="{{ route('login.action') }}" method="POST">

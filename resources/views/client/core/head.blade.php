@@ -28,5 +28,5 @@
         @yield('content')
     </main>
 </body>
-
+<script type="text/javascript" src="{{ asset('client/assets/js/main.js') }}"></script>
 </html>

@@ -100,7 +100,7 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    gap: 17px 0;
+    gap: 28px 0;
 }
 .acessar-register .titulo-register{
     color:#fff;
@@ -162,4 +162,17 @@ font-size: 17px;
 .btn-criar-register a span{
 
 margin-bottom: 5px;
+}
+label{
+    position: relative;
+}
+label .alert{
+    color: #eb1919;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    margin-bottom: 0;
+    bottom: -22px;
+    position: absolute;
+    left: 42px;
+    font-size: 10px;
 }
