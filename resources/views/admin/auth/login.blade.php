@@ -42,7 +42,7 @@
                         </div>
                     @endif
                     <!-- form -->
-                    <form action="{{ route('login.action') }}" method="POST">
+                    <form action="{{route('loginadmin.action')}}" method="POST">
 
                         @csrf
                         <div class="mb-3">
