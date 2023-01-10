@@ -19,7 +19,7 @@ class AdminAccess
             return $next($request);
         }
         // dd('Acesso negado, você não é um administrador');
-        return redirect()->route('loginadmin');
+        return redirect()->route('admin.login');
 
     }
 }

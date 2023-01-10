@@ -51,7 +51,8 @@
                                 <img class="img-pessoa-blog" src="{{asset('storage/'.$blog->path_image_author)}}" alt="">
                                 <div class="descricao-pessoa-blog">
                                     <h4 class="titulo-pessoa-blog">{{$blog->author}}</h4>
-                                    <span class="minutos-blog">{{$blog->created_at}}</span>
+                                    {{-- <span class="minutos-blog">{{$blog->created_at}}</span> --}}
+                                    <span class="minutos-blog">{{Carbon\Carbon::parse($blog->created_at)->format('d/m/Y')}}</span>
                                 </div>
                             </div>
                             {{-- <div class="curtidas-blog">

@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
+// use Carbon;
 use App\Models\Blog;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use App\Http\Controllers\Helpers\HelperArchive;
+
 
 class BlogController extends Controller
 {
@@ -23,12 +25,17 @@ class BlogController extends Controller
 
     public function indexblogs(Blog $blogs) {
         $blogs = Blog::paginate('30');
+
+
+
         return view('client.dashboard.blogs', ['blogs' => $blogs]);
     }
 
     public function showblog(Blog $blog) {
 
-        return view('client.dashboard.blog', ['blog' => $blog]);
+
+
+        return view('client.dashboard.blog', ['blog' => $blog,]);
     }
 
 

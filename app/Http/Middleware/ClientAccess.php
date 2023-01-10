@@ -20,6 +20,6 @@ class ClientAccess
             return $next($request);
         }
         // dd('Acesso negado, você não é um cliente');
-        return redirect()->route('login');
+        return redirect()->route('client.login');
     }
 }

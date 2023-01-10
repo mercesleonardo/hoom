@@ -50,7 +50,7 @@
                                         <img class="img-pessoa-blogs" src="{{asset('storage/'.$itens->path_image_author)}}" alt="">
                                         <div class="descricao-pessoa-blogs">
                                             <h4 class="titulo-pessoa-blogs">{{$itens->author}}</h4>
-                                            <span class="minutos-blogs">{{$itens->created_at}}</span>
+                                            <span class="minutos-blogs">{{Carbon\Carbon::parse($itens->created_at)->format('d/m/Y')}}</span>
                                         </div>
                                     </div>
                                     {{-- <div class="curtidas-blogs">
