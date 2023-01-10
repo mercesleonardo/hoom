@@ -4,17 +4,17 @@
     <section class="sec-blog" style="background-image:url(images/pd-dashboard.png);">
         <div class="topo-lateral-blog">
             <div class="logo-hoom-blog">
-                <img src="images/logo.png" alt="">
+                <img src="{{asset('images/logo.png')}}" alt="">
             </div>
             <div class="rede-lateral-blog">
                 <a href="">
-                    <img src="images/icone-rede1.png" alt="">
+                    <img src="{{asset('images/icone-rede1.png')}}" alt="">
                 </a>
                 <a href="">
-                    <img src="images/icone-rede2.png" alt="">
+                    <img src="{{asset('images/icone-rede2.png')}}" alt="">
                 </a>
                 <a href="">
-                    <img src="images/icone-rede3.png" alt="">
+                    <img src="{{asset('images/icone-rede3.png')}}" alt="">
                 </a>
             </div>
         </div>
@@ -23,12 +23,14 @@
                 <div class="ld1-titulo-blog">
                     <h4 class="titulo-principal-blog">
                         <a class="esq-blog" href="{{route('client.dashboard.blogs')}}">
-                            <img class="img-esq-blog" src="images/esq.png" alt="">
+                            <img class="img-esq-blog" src="{{asset('images/esq.png')}}" alt="">
                         </a>Blog
                     </h4>
                 </div>
                 <div class="ld2-titulo-blog">
-                        <img src="images/icone-home.png" alt="">
+                    <a href="{{ route('client.dashboard')}}">
+                        <img src="{{asset('images/icone-home.png')}}" alt="">
+                    </a>
                 </div>
             </div>
 
@@ -61,9 +63,9 @@
 
                 </div>
             </div>
-            <a class="mais-blog" href="">
+            {{-- <a class="mais-blog" href="">
                 +
-            </a>
+            </a> --}}
         </div>
     </section>
 @endsection

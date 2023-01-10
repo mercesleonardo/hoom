@@ -4,17 +4,17 @@
     <section class="sec-dashboard" style="background-image:url(images/pd-dashboard.png);">
         <div class="topo-lateral-dashboard">
             <div class="logo-hoom-dashboard">
-                <img src="images/logo.png" alt="">
+                <img src="{{asset('images/logo.png')}}" alt="">
             </div>
             <div class="rede-lateral-dashboard">
                 <a href="">
-                    <img src="images/icone-rede1.png" alt="">
+                    <img src="{{asset('images/icone-rede1.png')}}" alt="">
                 </a>
                 <a href="">
-                    <img src="images/icone-rede2.png" alt="">
+                    <img src="{{asset('images/icone-rede2.png')}}" alt="">
                 </a>
                 <a href="">
-                    <img src="images/icone-rede3.png" alt="">
+                    <img src="{{asset('images/icone-rede3.png')}}" alt="">
                 </a>
             </div>
         </div>
@@ -26,7 +26,7 @@
 
                 </div>
                 <div class="ld2-titulo-dashboard">
-                    <a href="{{route('logout')}}" class="logout-button">
+                    <a href="{{route('client.logout')}}" class="logout-button">
                         <span>Sair</span>
                         {{-- <img src="images/icone-home.png"> --}}
                     </a>
@@ -34,8 +34,8 @@
             </div>
             <div class="conteudo-box-dashboard">
                 <div class="box-dashboard">
-                    <a href="{{ route('projects') }}">
-                        <img src="images/icone-dashboard1.png" alt="">
+                    <a href="{{ route('client.projects') }}">
+                        <img src="{{asset('images/icone-dashboard1.png')}}" alt="">
                         <h4 class="titulo-dashboard">Meus Projetos</h4>
                     </a>
                 </div>
@@ -53,7 +53,7 @@
 
                 <div class="box-dashboard">
                     <a href="{{route('client.dashboard.blogs')}}">
-                        <img src="images/icone-dashboard6.png" alt="">
+                        <img src="{{asset('images/icone-dashboard6.png')}}" alt="">
                         <h4 class="titulo-dashboard">BLOG</h4>
                     </a>
                 </div>
@@ -65,9 +65,9 @@
                     </a>
                 </div> --}}
             </div>
-            <a class="mais-dashboard" href="">
+            {{-- <a class="mais-dashboard" href="">
                 +
-            </a>
+            </a> --}}
         </div>
     </section>
 @endsection

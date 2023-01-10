@@ -10,8 +10,8 @@
                         <div class="page-title-box">
                             <div class="page-title-right">
                                 <ol class="breadcrumb m-0">
-                                    <li class="breadcrumb-item"><a href="{{route('painel')}}">Dashboard</a></li>
-                                    <li class="breadcrumb-item"><a href="{{route('admin.blog.index')}}">Usuários</a></li>
+                                    <li class="breadcrumb-item"><a href="{{route('admin.painel')}}">Dashboard</a></li>
+                                    <li class="breadcrumb-item"><a href="{{route('admin.blog.index')}}">Blogs</a></li>
                                     <li class="breadcrumb-item active">Criar blog</li>
                                 </ol>
                             </div>

@@ -10,7 +10,7 @@
                         <div class="page-title-box">
                             <div class="page-title-right">
                                 <ol class="breadcrumb m-0">
-                                    <li class="breadcrumb-item"><a href="{{route('painel')}}">Dashboard</a></li>
+                                    <li class="breadcrumb-item"><a href="{{route('admin.painel')}}">Dashboard</a></li>
                                     <li class="breadcrumb-item"><a href="{{route('admin.links.index')}}">Links</a></li>
                                     <li class="breadcrumb-item active">Editar Links</li>
                                 </ol>

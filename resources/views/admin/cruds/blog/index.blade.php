@@ -10,8 +10,8 @@
                         <div class="page-title-box">
                             <div class="page-title-right">
                                 <ol class="breadcrumb m-0">
-                                    <li class="breadcrumb-item"><a href="{{route('painel')}}">Dashboard</a></li>
-                                    <li class="breadcrumb-item active">Usuários</li>
+                                    <li class="breadcrumb-item"><a href="{{route('admin.painel')}}">Dashboard</a></li>
+                                    <li class="breadcrumb-item active">Blogs</li>
                                 </ol>
                             </div>
                             <h4 class="page-title">Blogs</h4>
@@ -29,7 +29,7 @@
                                         {{-- <button id="btSubmitDelete" data-route="{{route('destroy')}}" type="button" class="btn btn-danger" style="display: none;">Deletar selecionados</button> --}}
                                     </div>
                                     <div class="col-6">
-                                        <a href="{{route('create')}}" class="btn btn-success float-end">Adicionar novo <i class="mdi mdi-plus"></i></a>
+                                        <a href="{{route('admin.blog.create')}}" class="btn btn-success float-end">Adicionar novo <i class="mdi mdi-plus"></i></a>
                                     </div>
                                 </div>
                                 <table data-toggle="table" data-page-size="5" data-pagination="false" class="table-bordered table-sortable">
@@ -70,9 +70,9 @@
                                                 <td>
                                                     <div class="row">
                                                         <div class="col-4">
-                                                            <a href="{{route('edit',['blog' => $blog->id])}}" class="btn-icon mdi mdi-square-edit-outline"></a>
+                                                            <a href="{{route('admin.blog.edit',['blog' => $blog->id])}}" class="btn-icon mdi mdi-square-edit-outline"></a>
                                                         </div>
-                                                        <form action="{{route('destroy',['blog' => $blog->id])}}" class="col-4" method="POST">
+                                                        <form action="{{route('admin.blog.destroy',['blog' => $blog->id])}}" class="col-4" method="POST">
                                                             @method('DELETE') @csrf
                                                             <button type="button" class="btn-icon btSubmitDeleteItem"><i class="mdi mdi-trash-can"></i></button>
                                                         </form>

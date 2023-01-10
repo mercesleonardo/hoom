@@ -4,17 +4,17 @@
     <section class="sec-blogs" style="background-image:url(images/pd-dashboard.png);">
         <div class="topo-lateral-blogs">
             <div class="logo-hoom-blogs">
-                <img src="images/logo.png" alt="">
+                <img src="{{asset('images/logo.png')}}" alt="">
             </div>
             <div class="rede-lateral-blogs">
                 <a href="">
-                    <img src="images/icone-rede1.png" alt="">
+                    <img src="{{asset('images/icone-rede1.png')}}" alt="">
                 </a>
                 <a href="">
-                    <img src="images/icone-rede2.png" alt="">
+                    <img src="{{asset('images/icone-rede2.png')}}" alt="">
                 </a>
                 <a href="">
-                    <img src="images/icone-rede3.png" alt="">
+                    <img src="{{asset('images/icone-rede3.png')}}" alt="">
                 </a>
             </div>
         </div>
@@ -22,13 +22,15 @@
             <div class="engloba-titulo-blogs">
                 <div class="ld1-titulo-blogs">
                     <h4 class="titulo-principal-blogs">
-                        <a class="esq-blogs" href="{{ route('dashboard') }}">
-                            <img class="img-esq-blogs" src="images/esq.png" alt="">
+                        <a class="esq-blogs" href="{{ route('client.dashboard') }}">
+                            <img class="img-esq-blogs" src="{{asset('images/esq.png')}}" alt="">
                         </a>Blogs
                     </h4>
                 </div>
                 <div class="ld2-titulo-blogs">
-                    <img src="images/icone-home.png" alt="">
+                    <a href="{{ route('client.dashboard')}}">
+                        <img src="{{asset('images/icone-home.png')}}" alt="">
+                    </a>
                 </div>
             </div>
 
@@ -62,9 +64,9 @@
                     </div>
                 @endforeach
             </div>
-            <a class="mais-blogs" href="">
+            {{-- <a class="mais-blogs" href="">
                 +
-            </a>
+            </a> --}}
         </div>
     </section>
 @endsection

@@ -54,9 +54,9 @@ class RegisterController extends Controller
             'email' =>'required|email',
             'phone' => 'min:15',
             'password' =>'required|min:6|confirmed',
-            
 
-        ],[ 
+
+        ],[
             'name.required' =>'Nome é obrigatório',
             'phone.min' =>'Informe um número válido',
             'email.required' =>'Email é obrigatório',
@@ -70,7 +70,7 @@ class RegisterController extends Controller
         $data['password'] = Hash::make($data['password']);
         User::create($data);
 
-        return redirect()->route('login');
+        return redirect()->route('client.login');
     }
 
     public function userstore(Request $request) {

@@ -15,7 +15,7 @@ class LoginadminController extends Controller
         $isLoggedIn = Auth::check();
         if($isLoggedIn) {
             if(Auth::user()->admin == 1) {
-                return redirect()->route('painel');
+                return redirect()->route('admin.painel');
             }
 
         }
@@ -36,7 +36,7 @@ class LoginadminController extends Controller
 
         if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
 
-            return redirect()->route('painel');
+            return redirect()->route('admin.painel');
         } else {
             return redirect()->back()->with('danger', 'E-mail ou senha inválida');
         }

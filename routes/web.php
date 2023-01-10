@@ -16,12 +16,12 @@ use App\Http\Controllers\LoginadminController;
 // Middleware Authentication client
 Route::middleware(['client'])->group(function() {
     //Dashboard routes
-    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
-    Route::get('/logout', [DashboardController::class, 'logout'])->name('logout');
+    Route::get('/client/dashboard', [DashboardController::class, 'index'])->name('client.dashboard');
+    Route::get('/client/logout', [DashboardController::class, 'logout'])->name('client.logout');
 
     //Projects routes
-    Route::get('/projects', [ProjectController::class, 'index'])->name('projects');
-    Route::get('/project/{project}', [ProjectController::class, 'show'])->name('project');
+    Route::get('/client/projects', [ProjectController::class, 'index'])->name('client.projects');
+    Route::get('/client/project/{project}', [ProjectController::class, 'show'])->name('client.project');
 
     //Blogs routes
     Route::get('/client/blogs', [BlogController::class, 'indexblogs'])->name('client.dashboard.blogs');
@@ -34,37 +34,37 @@ Route::middleware(['client'])->group(function() {
 });
 
 //Home client routes
-Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/', [HomeController::class, 'index'])->name('client.home');
 
 //Login client routes
-Route::get('/login', [LoginController::class, 'index'])->name('login');
-Route::post('/login', [LoginController::class, 'login_action'])->name('login.action');
+Route::get('/client/login', [LoginController::class, 'index'])->name('client.login');
+Route::post('/client/login', [LoginController::class, 'login_action'])->name('client.login.action');
 
 //Register client routes
-Route::get('/register', [RegisterController::class, 'index'])->name('register');
-Route::post('/register', [RegisterController::class, 'store'])->name('register.store');
+Route::get('/client/register', [RegisterController::class, 'index'])->name('client.register');
+Route::post('/client/register', [RegisterController::class, 'store'])->name('client.register.store');
 
 
 
 // Middleware Authentication admin
 Route::middleware(['admin'])->group(function() {
 
-    Route::get('/painel', [PainelController::class, 'index'])->name('painel');
-    Route::get('/logoutadmin', [PainelController::class, 'logout'])->name('logoutadmin');
+    Route::get('/admin/painel', [PainelController::class, 'index'])->name('admin.painel');
+    Route::get('/admin/logout', [PainelController::class, 'logout'])->name('admin.logout');
 
-    Route::get('/blogs', [BlogController::class, 'index'])->name('admin.blog.index');
-    Route::get('/blogs/create', [BlogController::class, 'create'])->name('create');
-    Route::post('blogs/store', [BlogController::class, 'store'])->name('admin.blog.store');
-    Route::get('/blogs/edit/{blog}', [BlogController::class, 'edit'])->name('edit');
-    Route::put('/blogs/update/{blog}', [BlogController::class, 'update'])->name('admin.blog.update');
-    Route::delete('/blogs/delete/{blog}', [BlogController::class, 'destroy'])->name('destroy');
+    Route::get('/admin/blogs', [BlogController::class, 'index'])->name('admin.blog.index');
+    Route::get('/admin/blogs/create', [BlogController::class, 'create'])->name('admin.blog.create');
+    Route::post('/admin/blogs/store', [BlogController::class, 'store'])->name('admin.blog.store');
+    Route::get('/admin/blogs/edit/{blog}', [BlogController::class, 'edit'])->name('admin.blog.edit');
+    Route::put('/admin/blogs/update/{blog}', [BlogController::class, 'update'])->name('admin.blog.update');
+    Route::delete('/admin/blogs/delete/{blog}', [BlogController::class, 'destroy'])->name('admin.blog.destroy');
 
-    Route::get('/painel/client', [RegisterController::class, 'painelClient'])->name('admin.user.index');
-    Route::get('/painel/client/create', [RegisterController::class, 'create'])->name('admin.user.create');
-    Route::post('painel/client/store', [RegisterController::class, 'userstore'])->name('admin.user.store');
-    Route::get('painel/client/edit/{user}', [RegisterController::class, 'edit'])->name('admin.user.edit');
-    Route::put('/painel/client/update/{user}', [RegisterController::class, 'update'])->name('admin.user.update');
-    Route::delete('/painel/client/delete/{user}', [RegisterController::class, 'destroy'])->name('admin.user.destroy');
+    Route::get('/admin/user', [RegisterController::class, 'painelClient'])->name('admin.user.index');
+    Route::get('/admin/user/create', [RegisterController::class, 'create'])->name('admin.user.create');
+    Route::post('admin/user/store', [RegisterController::class, 'userstore'])->name('admin.user.store');
+    Route::get('admin/user/edit/{user}', [RegisterController::class, 'edit'])->name('admin.user.edit');
+    Route::put('/admin/user/update/{user}', [RegisterController::class, 'update'])->name('admin.user.update');
+    Route::delete('/admin/user/delete/{user}', [RegisterController::class, 'destroy'])->name('admin.user.destroy');
 
     Route::get('/admin/projects', [ProjectController::class, 'indexpainel'])->name('admin.projects.index');
     Route::get('/admin/projects/create', [ProjectController::class, 'create'])->name('admin.projects.create');
@@ -81,6 +81,6 @@ Route::middleware(['admin'])->group(function() {
     Route::delete('/admin/links/delete/{link}', [LinkController::class, 'destroy'])->name('admin.links.destroy');
 });
 
-Route::get('/loginadmin', [LoginadminController::class, 'index'])->name('loginadmin');
-Route::post('/loginadmin', [LoginadminController::class, 'login_action'])->name('loginadmin.action');
+Route::get('/admin/login', [LoginadminController::class, 'index'])->name('admin.login');
+Route::post('/admin/login', [LoginadminController::class, 'login_action'])->name('admin.login.action');
 

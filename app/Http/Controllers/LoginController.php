@@ -16,9 +16,9 @@ class LoginController extends Controller
         $isLoggedIn = Auth::check();
         if($isLoggedIn) {
             if(Auth::user()->client == 1) {
-                return redirect()->route('dashboard');
+                return redirect()->route('client.dashboard');
             }
-            
+
         }
         return view('client.auth.login');
     }
@@ -35,11 +35,11 @@ class LoginController extends Controller
         );
 
         if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
-            
-            return redirect()->route('dashboard');
+
+            return redirect()->route('client.dashboard');
         } else {
             return redirect()->back()->with('danger', 'Email ou senha inválidos');
         }
-        
+
     }
 }

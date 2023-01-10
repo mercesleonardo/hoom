@@ -10,7 +10,7 @@
                         <div class="page-title-box">
                             <div class="page-title-right">
                                 <ol class="breadcrumb m-0">
-                                    <li class="breadcrumb-item"><a href="{{route('painel')}}">Dashboard</a></li>
+                                    <li class="breadcrumb-item"><a href="{{route('admin.painel')}}">Dashboard</a></li>
                                     <li class="breadcrumb-item active">Projetos</li>
                                 </ol>
                             </div>
@@ -60,18 +60,18 @@
                                                 <td>{{$project->link}}</td>
                                                 <td>
                                                     @switch($project->status)
-                                                        @case(1) <span>A fazer</span> @break    
-                                                        @case(2) <span>Em produção</span> @break    
-                                                        @case(3) <span>Aguardando</span> @break    
-                                                        @case(4) <span>Stand by</span> @break    
-                                                        @case(5) <span>Travado</span> @break    
-                                                        @case(6) <span>Parado</span> @break    
-                                                        @case(7) <span>Em aprovação</span> @break    
-                                                        @case(8) <span>Ajustes</span> @break    
-                                                        @case(9) <span>Concluído</span> @break    
+                                                        @case(1) <span>A fazer</span> @break
+                                                        @case(2) <span>Em produção</span> @break
+                                                        @case(3) <span>Aguardando</span> @break
+                                                        @case(4) <span>Stand by</span> @break
+                                                        @case(5) <span>Travado</span> @break
+                                                        @case(6) <span>Parado</span> @break
+                                                        @case(7) <span>Em aprovação</span> @break
+                                                        @case(8) <span>Ajustes</span> @break
+                                                        @case(9) <span>Concluído</span> @break
                                                     @endswitch
                                                 </td>
-                                                
+
                                                 <td>{{Carbon\Carbon::parse($project->created_at)->format('d/m/Y H:i')}}</td>
                                                 <td>
                                                     <div class="row">

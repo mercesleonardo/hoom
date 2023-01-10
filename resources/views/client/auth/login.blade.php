@@ -4,19 +4,19 @@
     <section class="sec-signin" style="background-image:url(images/bg-padrao.png);">
         <div class="topo-lateral-login">
             <div class="logo-hoom-login">
-                <a href="{{ route('home') }}">
-                    <img src="images/logo.png" alt="">
+                <a href="{{ route('client.home') }}">
+                    <img src="{{asset('images/logo.png')}}" alt="">
                 </a>
             </div>
             <div class="rede-lateral-login">
                 <a href="">
-                    <img src="images/icone-rede1.png" alt="">
+                    <img src="{{asset('images/icone-rede1.png')}}" alt="">
                 </a>
                 <a href="">
-                    <img src="images/icone-rede2.png" alt="">
+                    <img src="{{asset('images/icone-rede2.png')}}" alt="">
                 </a>
                 <a href="">
-                    <img src="images/icone-rede3.png" alt="">
+                    <img src="{{asset('images/icone-rede3.png')}}" alt="">
                 </a>
             </div>
         </div>
@@ -44,7 +44,7 @@
                     @endif
                 </section>
 
-                <form action="{{ route('login.action') }}" method="POST">
+                <form action="{{ route('client.login.action') }}" method="POST">
                     @csrf
 
                     <label for="email">
@@ -59,7 +59,7 @@
                 </form>
 
                 <div class="btn-criar-login">
-                    <a href="{{ route('register') }}"><span class="criar">Ou</span>Criar uma Conta</a>
+                    <a href="{{ route('client.register') }}"><span class="criar">Ou</span>Criar uma Conta</a>
                 </div>
             </div>
         </div>

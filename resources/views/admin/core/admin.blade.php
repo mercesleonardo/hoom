@@ -190,7 +190,7 @@
                                 <div class="dropdown-divider"></div>
 
                                 <!-- item-->
-                                <a href="{{route('logoutadmin')}}" class="dropdown-item notify-item">
+                                <a href="{{route('admin.logout')}}" class="dropdown-item notify-item">
                                     <i class="fe-log-out"></i>
                                     <span>Sair</span>
                                 </a>
@@ -281,7 +281,7 @@
                             <li class="menu-title">Navegação</li>
 
                             <li>
-                                <a nofollow href="{{route('painel')}}">
+                                <a nofollow href="{{route('admin.painel')}}">
                                     <i class="mdi mdi-view-dashboard-outline"></i>
                                     <span> Dashboard </span>
                                 </a>

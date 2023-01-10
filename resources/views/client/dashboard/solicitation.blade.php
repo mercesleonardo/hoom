@@ -6,7 +6,7 @@
             <div class="engloba-titulo">
                 <div class="ld1-titulo">
                     <h4 class="titulo">
-                        <a class="esq" href="{{ route('dashboard') }}">
+                        <a class="esq" href="{{ route('client.dashboard') }}">
                             <img class="img-esq" src="images/esq.png" alt="">
                         </a>Solicitações
                     </h4>

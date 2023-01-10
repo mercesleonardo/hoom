@@ -4,19 +4,19 @@
     <section class="sec-signup" style="background-image:url(images/bg-padrao.png);">
         <div class="topo-lateral-register">
             <div class="logo-hoom-register">
-                <a href="{{ route('home') }}">
-                    <img src="images/logo.png" alt="">
+                <a href="{{ route('client.home') }}">
+                    <img src="{{asset('images/logo.png')}}" alt="">
                 </a>
             </div>
             <div class="rede-lateral-register">
                 <a href="">
-                    <img src="images/icone-rede1.png" alt="">
+                    <img src="{{asset('images/icone-rede1.png')}}" alt="">
                 </a>
                 <a href="">
-                    <img src="images/icone-rede2.png" alt="">
+                    <img src="{{asset('images/icone-rede2.png')}}" alt="">
                 </a>
                 <a href="">
-                    <img src="images/icone-rede3.png" alt="">
+                    <img src="{{asset('images/icone-rede3.png')}}" alt="">
                 </a>
             </div>
         </div>
@@ -36,7 +36,7 @@
                     @endif
                 </section> --}}
 
-                <form action="{{ route('register.store') }}" method="POST">
+                <form action="{{ route('client.register.store') }}" method="POST">
                     @csrf
 
                     <label for="client">
@@ -85,7 +85,7 @@
                 </form>
 
                 <div class="btn-criar-register">
-                    <a href="{{ route('login') }}"><span class="criar">Ou</span>Acessar minha conta</a>
+                    <a href="{{ route('client.login') }}"><span class="criar">Ou</span>Acessar minha conta</a>
                 </div>
             </div>
         </div>

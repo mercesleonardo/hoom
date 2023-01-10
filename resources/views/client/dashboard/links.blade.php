@@ -6,13 +6,15 @@
             <div class="engloba-titulo">
                 <div class="ld1-titulo">
                     <h4 class="titulo">
-                        <a class="esq" href="{{ route('dashboard') }}">
-                            <img class="img-esq" src="images/esq.png" alt="">
-                        </a>{{$link->name}}
+                        <a class="esq" href="{{ route('client.dashboard') }}">
+                            <img class="img-esq" src="{{ asset('images/esq.png') }}" alt="">
+                        </a>{{ $link->name }}
                     </h4>
                 </div>
                 <div class="ld2-titulo">
-                    <img src="images/icone-home.png" alt="">
+                    <a class="esq" href="{{ route('client.dashboard') }}">
+                        <img src="{{asset('images/icone-home.png')}}" alt="">
+                    </a>
                 </div>
             </div>
             <div class="conteudo-box-projeto">

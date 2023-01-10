@@ -10,13 +10,13 @@
             </div>
             <div class="rede-lateral-projects">
                 <a href="">
-                    <img src="images/icone-rede1.png" alt="">
+                    <img src="{{ asset('images/icone-rede1.png') }}" alt="">
                 </a>
                 <a href="">
-                    <img src="images/icone-rede2.png" alt="">
+                    <img src="{{ asset('images/icone-rede2.png') }}" alt="">
                 </a>
                 <a href="">
-                    <img src="images/icone-rede3.png" alt="">
+                    <img src="{{ asset('images/icone-rede3.png') }}" alt="">
                 </a>
             </div>
         </div>
@@ -24,13 +24,15 @@
             <div class="engloba-titulo-projects">
                 <div class="ld1-titulo-projects">
                     <h4 class="titulo-projects">
-                        <a class="esq-projects" href="{{ route('dashboard') }}">
+                        <a class="esq-projects" href="{{ route('client.dashboard') }}">
                             <img class="img-esq-projects" src="images/esq.png" alt="">
                         </a>Meus Projetos
                     </h4>
                 </div>
                 <div class="ld2-titulo-projects">
-                    <img src="images/icone-home.png" alt="">
+                    <a href="{{ route('client.dashboard') }}">
+                        <img src="{{ asset('images/icone-home.png') }}" alt="">
+                    </a>
                 </div>
             </div>
             <div class="conteudo-box-projetos">
@@ -42,60 +44,87 @@
                             </h4>
                             <span class="separador-projects"></span>
                             <div class="btn-projetos">
-                                <a href="{{ route('project', ['project'=>$itens->id]) }}">Ver projeto</a>
+                                <a href="{{ route('client.project', ['project' => $itens->id]) }}">Ver projeto</a>
                             </div>
                         </div>
                         <div class="ld2-projetos">
                             <div class="btn-status-projects">
-                                <img src="images/icone-status1.png" alt="">
-                                <h4 class="titulo-projects">
-                                    @switch($itens->status)
-                                        @case(1)
+
+
+                                @switch($itens->status)
+                                    @case(1)
+                                        <img src="{{ asset('images/icone-status2.png') }}" alt="">
+                                        <h4 class="titulo-projects">
                                             <span>A fazer</span>
-                                        @break
+                                        </h4>
+                                    @break
 
-                                        @case(2)
+                                    @case(2)
+                                        <img src="{{ asset('images/icone-status1.png') }}" alt="">
+                                        <h4 class="titulo-projects">
                                             <span>Em produção</span>
-                                        @break
+                                        </h4>
+                                    @break
 
-                                        @case(3)
+                                    @case(3)
+                                        <img src="{{ asset('images/icone-status2.png') }}" alt="">
+                                        <h4 class="titulo-projects">
                                             <span>Aguardando</span>
-                                        @break
+                                        </h4>
+                                    @break
 
-                                        @case(4)
+                                    @case(4)
+                                        <img src="{{ asset('images/icone-status2.png') }}" alt="">
+                                        <h4 class="titulo-projects">
                                             <span>Stand by</span>
-                                        @break
+                                        </h4>
+                                    @break
 
-                                        @case(5)
+                                    @case(5)
+                                        <img src="{{ asset('images/icone-status2.png') }}" alt="">
+                                        <h4 class="titulo-projects">
                                             <span>Travado</span>
-                                        @break
+                                        </h4>
+                                    @break
 
-                                        @case(6)
+                                    @case(6)
+                                        <img src="{{ asset('images/icone-status2.png') }}" alt="">
+                                        <h4 class="titulo-projects">
                                             <span>Parado</span>
-                                        @break
+                                        </h4>
+                                    @break
 
-                                        @case(7)
+                                    @case(7)
+                                        <img src="{{ asset('images/icone-status2.png') }}" alt="">
+                                        <h4 class="titulo-projects">
                                             <span>Em aprovação</span>
-                                        @break
+                                        </h4>
+                                    @break
 
-                                        @case(8)
+                                    @case(8)
+                                        <img src="{{ asset('images/icone-status1.png') }}" alt="">
+                                        <h4 class="titulo-projects">
                                             <span>Ajustes</span>
-                                        @break
+                                        </h4>
+                                    @break
 
-                                        @case(9)
+                                    @case(9)
+                                        <img src="{{ asset('images/icone-status3.png') }}" alt="">
+                                        <h4 class="titulo-projects">
                                             <span>Concluído</span>
-                                        @break
-                                    @endswitch
-                                </h4>
+                                        </h4>
+                                    @break
+                                @endswitch
+
                             </div>
                         </div>
                     </div>
                 @endforeach
 
             </div>
-            <a class="mais-projects" href="">
+            {{-- <a class="mais-projects" href="">
                 +
-            </a>
+            </a> --}}
         </div>
     </section>
 @endsection
