@@ -42,7 +42,7 @@
                                             <th>Nome</th>
                                             <th>E-mail</th>
                                             <th>Contato</th>
-                                            <th>Status</th>
+                                            {{-- <th>Status</th> --}}
                                             <th>Nível</th>
                                             <th>Criado em</th>
                                             <th>Ações</th>
@@ -60,12 +60,12 @@
                                                 <td>{{$user->name}}</td>
                                                 <td>{{$user->email}}</td>
                                                 <td>{{$user->phone}}</td>
-                                                <td>
+                                                {{-- <td>
                                                     @switch($user->active)
                                                         @case(0) <span class="badge bg-danger">Inativo</span> @break
                                                         @case(1) <span class="badge bg-success">Ativo</span> @break
                                                     @endswitch
-                                                </td>
+                                                </td> --}}
                                                 <td>{{$user->options}}</td>
                                                 <td>{{Carbon\Carbon::parse($user->created_at)->format('d/m/Y H:i')}}</td>
                                                 <td>

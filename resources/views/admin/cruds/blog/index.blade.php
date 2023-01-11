@@ -43,7 +43,7 @@
                                             <th>Descrição</th>
                                             <th>Texto</th>
                                             <th>Autor</th>
-                                            <th>Status</th>
+                                            {{-- <th>Status</th> --}}
                                             <th>Criado em</th>
                                             <th>Ações</th>
                                         </tr>
@@ -60,12 +60,12 @@
                                                 <td>{{$blog->description}}</td>
                                                 <td>{!!Str::substr($blog->text, 0, 20)!!}</td>
                                                 <td>{{$blog->author}}</td>
-                                                <td>
+                                                {{-- <td>
                                                     @switch($blog->active)
                                                         @case(0) <span class="badge bg-danger">Inativo</span> @break
                                                         @case(1) <span class="badge bg-success">Ativo</span> @break
                                                     @endswitch
-                                                </td>
+                                                </td> --}}
                                                 <td>{{Carbon\Carbon::parse($blog->created_at)->format('d/m/Y H:i')}}</td>
                                                 <td>
                                                     <div class="row">

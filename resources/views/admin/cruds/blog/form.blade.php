@@ -57,14 +57,14 @@
                     'data-default-file' => isset($blog) ? ($blog->path_image_author != '' ? url('storage/' . $blog->path_image_author) : '') : '',
                 ]) !!}
             </div>
-            <div class="mb-3 form-check">
+            {{-- <div class="mb-3 form-check">
                 {!! Form::checkbox('active', '1', null, [
                     'class' => 'form-check-input',
                     'id' => 'active',
                     'required' => 'required',
                 ]) !!}
                 {!! Form::label('active', 'Ativar blog?', ['class' => 'form-check-label']) !!}
-            </div>
+            </div> --}}
         </div> <!-- end card-body-->
     </div> <!-- end card-->
 </div>

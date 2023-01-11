@@ -36,6 +36,7 @@
                 </div>
             </div>
             <div class="conteudo-box-projetos">
+
                 @foreach ($projects as $itens)
                     <div class="box-projetos">
                         <div class="ld1-projetos">

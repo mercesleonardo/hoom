@@ -248,7 +248,7 @@
                             </a>
                             <div class="dropdown-menu">
 
-                                <a href="#" class="dropdown-item">
+                                <a href="{{route('admin.user.index')}}" class="dropdown-item">
                                     <i class="mdi-account mdi me-1"></i>
                                     <span>Usuário</span>
                                 </a>
@@ -289,25 +289,25 @@
 
                             <li>
                                 <a nofollow href="{{route('admin.user.index')}}">
-                                    <i class="mdi mdi-view-dashboard-outline"></i>
+                                    <i class="mdi mdi-account"></i>
                                     <span> Usuários </span>
                                 </a>
                             </li>
                             <li>
                                 <a nofollow href="{{route('admin.blog.index')}}">
-                                    <i class="mdi mdi-view-dashboard-outline"></i>
+                                    <i class="mdi mdi-book-edit-outline"></i>
                                     <span> Blogs </span>
                                 </a>
                             </li>
                             <li>
                                 <a nofollow href="{{route('admin.projects.index')}}">
-                                    <i class="mdi mdi-view-dashboard-outline"></i>
+                                    <i class="mdi mdi-handshake-outline"></i>
                                     <span> Projetos </span>
                                 </a>
                             </li>
                             <li>
                                 <a nofollow href="{{route('admin.links.index')}}">
-                                    <i class="mdi mdi-view-dashboard-outline"></i>
+                                    <i class="mdi mdi-access-point"></i>
                                     <span> Links </span>
                                 </a>
                             </li>

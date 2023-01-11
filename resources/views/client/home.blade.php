@@ -28,7 +28,7 @@
             <div class="texto-home">
                 <h4 class="titulo-home">Bem vindo<br>ao Novo!</h4>
                 <p>
-                    Lorem ipsum dolor sit amet, consec
+                    Todos os seus projetos em um só lugar!
 
                 </p>
             </div>
