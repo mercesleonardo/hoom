@@ -88,5 +88,5 @@
             </div> <!-- container -->
         </div> <!-- content -->
     </div>
-    @include('Admin.components.links.resourcesIndex')
+    @include('admin.components.links.resourcesIndex')
 @endsection

@@ -21,12 +21,12 @@
                 </div>
                 <!-- end page title -->
                 {!! Form::model(null, ['route' => 'admin.user.store', 'class'=>'parsley-examples']) !!}
-                    @include('Admin.cruds.client.form')
+                    @include('admin.cruds.client.form')
                     {!! Form::button('Cadastrar', ['class'=>'btn btn-primary waves-effect waves-light float-end me-3 width-lg', 'type' => 'submit']) !!}
                     <a href="{{route('admin.user.index')}}" class="btn btn-secondary waves-effect waves-light float-end me-3 width-lg">Voltar</a>
                 {!! Form::close() !!}
             </div> <!-- container -->
         </div> <!-- content -->
     </div>
-    @include('Admin.components.links.resourcesCreateEdit')
+    @include('admin.components.links.resourcesCreateEdit')
 @endsection
