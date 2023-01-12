@@ -1,4 +1,4 @@
-@extends('Admin.core.admin')
+@extends('admin.core.admin')
 @section('content')
     <div class="content-page">
         <div class="content">
