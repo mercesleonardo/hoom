@@ -5,7 +5,7 @@
         <div class="topo-lateral-projects">
             <div class="logo-hoom-projects">
 
-                <img src="images/logo.png" alt="">
+                <img src="{{ asset('images/logo.png') }}" alt="">
 
             </div>
             <div class="rede-lateral-projects">
@@ -25,7 +25,7 @@
                 <div class="ld1-titulo-projects">
                     <h4 class="titulo-projects">
                         <a class="esq-projects" href="{{ route('client.dashboard') }}">
-                            <img class="img-esq-projects" src="images/esq.png" alt="">
+                            <img class="img-esq-projects" src="{{ asset('images/esq.png') }}" alt="">
                         </a>Meus Projetos
                     </h4>
                 </div>
