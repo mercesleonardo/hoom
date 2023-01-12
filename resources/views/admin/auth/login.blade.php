@@ -1,4 +1,4 @@
-@extends('Admin.core.auth')
+@extends('admin.core.auth')
 @section('content')
     <div class="auth-fluid" style="background-image: url({{ asset('admin/assets/images/bg-material.png') }})">
         <!--Auth fluid left content -->
