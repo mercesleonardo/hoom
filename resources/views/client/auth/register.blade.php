@@ -9,14 +9,14 @@
                 </a>
             </div>
             <div class="rede-lateral-register">
-                <a href="">
-                    <img src="{{asset('images/icone-rede1.png')}}" alt="">
+                <a href="https://www.instagram.com/hoominterativa/" target="blank">
+                    <img src="{{ asset('images/icone-rede1.png') }}" alt="Instagram">
                 </a>
-                <a href="">
-                    <img src="{{asset('images/icone-rede2.png')}}" alt="">
+                <a href="https://pt-br.facebook.com/hoominterativa/" target="blank">
+                    <img src="{{ asset('images/icone-rede2.png') }}" alt="Facebook">
                 </a>
-                <a href="">
-                    <img src="{{asset('images/icone-rede3.png')}}" alt="">
+                <a href="http://web.whatsapp.com/send?phone=5571996355333" target="_blank" rel="noopener noreferrer">
+                    <img src="{{ asset('images/icone-rede4.png') }}" alt="">
                 </a>
             </div>
         </div>
