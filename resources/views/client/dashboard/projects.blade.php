@@ -121,9 +121,8 @@
                         </div>
                     @endforeach
                 @else
-                    <h1>Você ainda não tem projetos cadastrados. Entre em contato com a central clicando <a
-                            class="whatsapp-link" href="http://web.whatsapp.com/send?phone=5571996355333" target="_blank"
-                            rel="noopener noreferrer"><span>Aqui</span></a></h1>
+                    <p class="whatsapp-link">Você ainda não tem projetos cadastrados. Entre em contato com a central <a href="http://web.whatsapp.com/send?phone=5571996355333" target="_blank"
+                        rel="noopener noreferrer"><span>Clicando aqui</span></a></p>
                 @endif
 
             </div>
