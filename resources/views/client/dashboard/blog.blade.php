@@ -43,9 +43,9 @@
                     <div class="descricao-blog">
                         <h2 class="titulo-blog">{{$blog->title}}</h2>
                         <h4 class="subtitulo-blog">{{$blog->description}}</h4>
-                        <p class="texto-blog">
+                        <div class="texto-blog">
                             {!!$blog->text!!}
-                        </p>
+                        </div>
                         <div class="pessoa-blog">
                             <div class="perfil-blog">
                                 <img class="img-pessoa-blog" src="{{asset('storage/'.$blog->path_image_author)}}" alt="">
