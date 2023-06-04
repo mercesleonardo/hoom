@@ -110,7 +110,7 @@ class LinkController extends Controller
 
         if(isset($request->delete_path_image) && !$path_image){
             $inputFile = $request->delete_path_image;
-            Storage::delete($benefitSection->$inputFile);
+            Storage::delete($$path_image->$inputFile);
             $data['path_image'] = null;
         }
 
